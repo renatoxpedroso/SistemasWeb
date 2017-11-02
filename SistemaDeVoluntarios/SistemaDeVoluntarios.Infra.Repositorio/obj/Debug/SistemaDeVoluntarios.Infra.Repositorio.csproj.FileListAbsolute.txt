@@ -1,0 +1,7 @@
+C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
+C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
+C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Dominio.dll
+C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Dominio.pdb
+C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
+C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
