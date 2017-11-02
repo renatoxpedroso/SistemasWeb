@@ -5,3 +5,15 @@ C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Rep
 C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.csprojResolveAssemblyReference.cache
 C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
 C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\Npgsql.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Dominio.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Dominio.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\Npgsql.xml
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb

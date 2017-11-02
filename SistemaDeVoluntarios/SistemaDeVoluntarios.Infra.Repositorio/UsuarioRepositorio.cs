@@ -8,5 +8,6 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
 {
     class UsuarioRepositorio
     {
+        //Renato
     }
 }

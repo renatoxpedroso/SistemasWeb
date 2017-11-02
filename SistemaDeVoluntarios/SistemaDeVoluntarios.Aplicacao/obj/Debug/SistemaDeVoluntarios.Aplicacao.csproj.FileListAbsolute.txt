@@ -5,3 +5,11 @@ C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao
 C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.csprojResolveAssemblyReference.cache
 C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.dll
 C:\Users\T-Gamer\Desktop\Web\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Aplicacao.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Aplicacao.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Dominio.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Dominio.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.pdb
