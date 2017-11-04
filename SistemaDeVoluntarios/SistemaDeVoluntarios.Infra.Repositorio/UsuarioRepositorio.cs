@@ -24,32 +24,196 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
         {
             using(NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
-                con.Open();
-                NpgsqlCommand comando = new NpgsqlCommand();
-                comando.Connection = con;
-                comando.CommandText = "Insert into usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado) " +
-                    "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado);";
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "INSERT INTO Usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado) "+
+                        "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado);";
 
-                comando.Parameters.AddWithValue("CodUsuario", usuarios.CodUsuario);
+                    comando.Parameters.AddWithValue("CodUsuario", usuarios.CodUsuario);
+                    comando.Parameters.AddWithValue("TipoUsuario", usuarios.TipoUsuario);
+                    comando.Parameters.AddWithValue("TipoPessoa", usuarios.TipoPessoa);
+                    comando.Parameters.AddWithValue("Nome", usuarios.Nome);
+                    comando.Parameters.AddWithValue("Email", usuarios.Email);
+                    comando.Parameters.AddWithValue("Senha", usuarios.Senha);
+                    comando.Parameters.AddWithValue("DataNacimento", usuarios.DataNacimento);
+                    comando.Parameters.AddWithValue("cpfCnpj", usuarios.cpfCnpj);
+                    comando.Parameters.AddWithValue("Telefone", usuarios.Telefone);
+                    comando.Parameters.AddWithValue("Celular", usuarios.Celular);
+                    comando.Parameters.AddWithValue("Rua", usuarios.Rua);
+                    comando.Parameters.AddWithValue("Numero", usuarios.Numero);
+                    comando.Parameters.AddWithValue("Bairro", usuarios.Bairro);
+                    comando.Parameters.AddWithValue("Cidade", usuarios.Cidade);
+                    comando.Parameters.AddWithValue("Cep", usuarios.Cep);
+                    comando.Parameters.AddWithValue("Estado", usuarios.Estado);
 
+                    comando.ExecuteNonQuery();
+                }catch(Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
 
         public void Alterar(Usuarios usuarios, string id)
         {
-            throw new NotImplementedException();
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "UPDATE Usuarios SET TipoUsuario=@TipoUsuario, TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNecimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado WHERE CodUsuario=@CodUsuario ";
+                       
+
+                    comando.Parameters.AddWithValue("CodUsuario", id);
+                    comando.Parameters.AddWithValue("TipoUsuario", usuarios.TipoUsuario);
+                    comando.Parameters.AddWithValue("TipoPessoa", usuarios.TipoPessoa);
+                    comando.Parameters.AddWithValue("Nome", usuarios.Nome);
+                    comando.Parameters.AddWithValue("Email", usuarios.Email);
+                    comando.Parameters.AddWithValue("Senha", usuarios.Senha);
+                    comando.Parameters.AddWithValue("DataNacimento", usuarios.DataNacimento);
+                    comando.Parameters.AddWithValue("cpfCnpj", usuarios.cpfCnpj);
+                    comando.Parameters.AddWithValue("Telefone", usuarios.Telefone);
+                    comando.Parameters.AddWithValue("Celular", usuarios.Celular);
+                    comando.Parameters.AddWithValue("Rua", usuarios.Rua);
+                    comando.Parameters.AddWithValue("Numero", usuarios.Numero);
+                    comando.Parameters.AddWithValue("Bairro", usuarios.Bairro);
+                    comando.Parameters.AddWithValue("Cidade", usuarios.Cidade);
+                    comando.Parameters.AddWithValue("Cep", usuarios.Cep);
+                    comando.Parameters.AddWithValue("Estado", usuarios.Estado);
+
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
         }
 
         public void Excluir(string id)
         {
-            throw new NotImplementedException();
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "DELETE FROM Usuarios WHERE CodUsuario=@CodUsuario ";
+
+                    comando.Parameters.AddWithValue("CodUsuario", id);
+
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
         }
 
-        public Usuarios Procurar(Guid id)
+        public Usuarios Procurar(string id)
         {
-            throw new NotImplementedException();
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "SELECT * FROM Usuarios WHERE CodUsuario=@CodUsuario ";
+
+
+                    comando.Parameters.AddWithValue("CodUsuario", id);
+
+                    NpgsqlDataReader leitor = comando.ExecuteReader();
+
+                    Usuarios user = null;
+
+                    while (leitor.NextResult())
+                    {
+                        user = new Usuarios();
+
+                        user.CodUsuario = Guid.Parse(leitor["CodUsuario"].ToString());
+                        user.TipoUsuario = Convert.ToInt16(leitor["TipoUsuario"].ToString());
+                        user.TipoPessoa = Convert.ToInt16(leitor["TipoPessoa"].ToString());
+                        user.Nome = leitor["Nome"].ToString();
+                        user.Email = leitor["Email"].ToString();
+                        user.Senha = leitor["Senha"].ToString();
+                        user.DataNacimento = Convert.ToDateTime(leitor["DataNacimento"].ToString());
+                        user.cpfCnpj = leitor["cpfCnpj"].ToString();
+                        user.Telefone = leitor["Telefone"].ToString();
+                        user.Celular = leitor["Celular"].ToString();
+                        user.Rua = leitor["Rua"].ToString();
+                        user.Numero = leitor["Numero"].ToString();
+                        user.Bairro = leitor["Bairro"].ToString();
+                        user.Cidade = leitor["Cidade"].ToString();
+                        user.Cep = Convert.ToInt16(leitor["Cep"].ToString());
+                        user.Estado = leitor["Estado"].ToString();
+                    }
+
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
         }
 
-        public 
+        public Usuarios ProcurarLogin(string Email, string Senha)
+        {
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "SELECT * FROM Usuarios WHERE Email=@Email and Senha=@Senha ";
+
+
+                    comando.Parameters.AddWithValue("Email", Email);
+                    comando.Parameters.AddWithValue("Senha", Senha);
+
+                    NpgsqlDataReader leitor = comando.ExecuteReader();
+
+                    Usuarios user = null;
+
+                    while (leitor.NextResult())
+                    {
+                        user = new Usuarios();
+
+                        user.CodUsuario = Guid.Parse(leitor["CodUsuario"].ToString());
+                        user.TipoUsuario = Convert.ToInt16(leitor["TipoUsuario"].ToString());
+                        user.TipoPessoa = Convert.ToInt16(leitor["TipoPessoa"].ToString());
+                        user.Nome = leitor["Nome"].ToString();
+                        user.Email = leitor["Email"].ToString();
+                        user.Senha = leitor["Senha"].ToString();
+                        user.DataNacimento = Convert.ToDateTime(leitor["DataNacimento"].ToString());
+                        user.cpfCnpj = leitor["cpfCnpj"].ToString();
+                        user.Telefone = leitor["Telefone"].ToString();
+                        user.Celular = leitor["Celular"].ToString();
+                        user.Rua = leitor["Rua"].ToString();
+                        user.Numero = leitor["Numero"].ToString();
+                        user.Bairro = leitor["Bairro"].ToString();
+                        user.Cidade = leitor["Cidade"].ToString();
+                        user.Cep = Convert.ToInt16(leitor["Cep"].ToString());
+                        user.Estado = leitor["Estado"].ToString();
+                    }
+
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
     }
 }

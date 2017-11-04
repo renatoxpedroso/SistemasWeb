@@ -12,6 +12,7 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
         void Inserir(Usuarios usuarios);
         void Alterar(Usuarios usuarios, string id);
         void Excluir(string id);
-        Usuarios Procurar(Guid id);
+        Usuarios Procurar(string id);
+        Usuarios ProcurarLogin(string Email, string Senha);
     }
 }

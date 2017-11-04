@@ -17,3 +17,14 @@ C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.csproj.CoreCompileInputs.cache
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\Npgsql.dll
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Dominio.dll
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\SistemaDeVoluntarios.Dominio.pdb
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\Npgsql.xml
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
