@@ -30,3 +30,18 @@ CREATE TABLE Usuarios
     CONSTRAINT Usuarios_pkey PRIMARY KEY (Id, CodUsuario)
 )
 ```
+
+### TABELA AÇÕES
+```C#
+CREATE TABLE public.acoes
+(
+    id integer NOT NULL DEFAULT nextval('"Acoes_Id_seq"'::regclass),
+    codAcao character varying COLLATE pg_catalog."default" NOT NULL,
+    assunto character varying(100) COLLATE pg_catalog."default",
+    tipoAcao character varying(100) COLLATE pg_catalog."default",
+    datInicio date,
+    datFim date,
+	status character varying(1) COLLATE pg_catalog."default",
+    CONSTRAINT acoes_pkey PRIMARY KEY (id, codAcao)
+)
+```
