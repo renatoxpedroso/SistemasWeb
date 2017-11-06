@@ -31,7 +31,7 @@ CREATE TABLE Usuarios
 )
 ```
 
-### TABELA AÇÕES
+### Tabela Ações
 ```C#
 CREATE TABLE public.acoes
 (
@@ -45,3 +45,15 @@ CREATE TABLE public.acoes
     CONSTRAINT acoes_pkey PRIMARY KEY (id, codAcao)
 )
 ```
+
+### Tabela Tipo Ação
+```C#
+CREATE TABLE public.tipo_acao
+(
+    id integer NOT NULL DEFAULT nextval('"Tipo_Acao_Id_seq"'::regclass),
+    codTipoAcao character varying COLLATE pg_catalog."default" NOT NULL,
+    Nome character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT tipo_acao_pkey PRIMARY KEY (id, codTipoAcao)
+)
+```
+
