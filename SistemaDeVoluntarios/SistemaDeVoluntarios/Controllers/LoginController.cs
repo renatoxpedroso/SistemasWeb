@@ -23,12 +23,6 @@ namespace SistemaDeVoluntarios.Controllers
 
                 return RedirectToAction("Index", "Index");
             }
-            else if (usuario == "douglas@douglas.com" && senha == "123")
-            {
-                Session["usuario"] = usuario;
-
-                return RedirectToAction("IndexUsuario", "Index");
-            }
             else
             {
                 return RedirectToAction("Index");
