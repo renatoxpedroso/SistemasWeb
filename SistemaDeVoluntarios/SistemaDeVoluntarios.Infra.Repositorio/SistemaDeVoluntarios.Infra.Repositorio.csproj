@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AcoesRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoAcoesRepositorio.cs" />
     <Compile Include="UsuarioAdministradorRepositorio.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
   </ItemGroup>

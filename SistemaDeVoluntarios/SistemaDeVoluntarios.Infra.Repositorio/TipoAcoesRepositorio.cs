@@ -11,16 +11,16 @@ using System.Data;
 
 namespace SistemaDeVoluntarios.Infra.Repositorio
 {
-    public class AcoesRepositorio : IAcoesRepositorio
+    public class TipoAcoesRepositorio : ITipoAcoesRepositorio
     {
         public string strConexao;
 
-        public AcoesRepositorio(string strConexao)
+        public TipoAcoesRepositorio(string strConexao)
         {
             this.strConexao = strConexao;
         }
 
-        public void Inserir(Acoes acoes)
+        public void Inserir(TipoAcoes tipoAcoes)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -29,16 +29,12 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "INSERT INTO Acoes (CodAcao, Assunto, TipoAcao, DataInicio, DataFim, Status) " +
-                        "Values(@CodAcao, @Assunto, @TipoAcao, @DataInicio, @DataFim, @Status);";
+                    comando.CommandText = "INSERT INTO Tipo_Acoes (CodTipoAcao, Nome) " +
+                        "Values(@CodTipoAcao, @Nome);";
 
-                    comando.Parameters.AddWithValue("CodAcao", acoes.CodAcoes);
-                    comando.Parameters.AddWithValue("Assunto", acoes.Assunto);
-                    comando.Parameters.AddWithValue("TipoAcao", acoes.TipoAcao);
-                    comando.Parameters.AddWithValue("DataInicio", acoes.DataInicio);
-                    comando.Parameters.AddWithValue("DataFim", acoes.DataFim);
-                    comando.Parameters.AddWithValue("Status", acoes.Status);
-  
+                    comando.Parameters.AddWithValue("CodTipoAcao", tipoAcoes.codTipoAcao);
+                    comando.Parameters.AddWithValue("AssuNomento", tipoAcoes.Nome);
+
 
                     comando.ExecuteNonQuery();
                 }
@@ -49,7 +45,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public void Alterar(Acoes acoes, Guid id)
+        public void Alterar(TipoAcoes tipoAcoes, Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -58,14 +54,11 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "UPDATE Acoes SET Assunto=@Assunto, TipoAcao=@TipoAcao, DataInicio=@DataInicio, DataFim=@DataFim, Status=@Status WHERE CodAcao=@CodAcao ";
+                    comando.CommandText = "UPDATE Tipo_Acoes SET Nome=@Nome WHERE CodTipoAcoes=@CodTipoAcao ";
 
 
-                    comando.Parameters.AddWithValue("CodAcao", id.ToString());
-                    comando.Parameters.AddWithValue("TipoAcao", acoes.TipoAcao);
-                    comando.Parameters.AddWithValue("DataInicio", acoes.DataInicio);
-                    comando.Parameters.AddWithValue("DataFim", acoes.DataFim);
-                    comando.Parameters.AddWithValue("Status", acoes.Status);
+                    comando.Parameters.AddWithValue("CodTipoAcao", id.ToString());
+                    comando.Parameters.AddWithValue("Nome", tipoAcoes.Nome);
 
 
                     comando.ExecuteNonQuery();
@@ -86,9 +79,9 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "DELETE FROM Acoes WHERE CodAcao=@CodAcao ";
+                    comando.CommandText = "DELETE FROM Tipo_Acoes WHERE CodTipoAcao=@CodTipoAcao ";
 
-                    comando.Parameters.AddWithValue("CodAcao", id.ToString());
+                    comando.Parameters.AddWithValue("CodTipoAcao", id.ToString());
 
                     comando.ExecuteNonQuery();
                 }
@@ -99,7 +92,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public Acoes Procurar(Guid id)
+        public TipoAcoes Procurar(Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -108,27 +101,24 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "SELECT * FROM Acoes WHERE CodAcao=@CodAcao ";
+                    comando.CommandText = "SELECT * FROM Tipo_Acoes WHERE CodTipoAcao=@CodTipoAcao ";
 
 
-                    comando.Parameters.AddWithValue("CodAcao", id.ToString());
+                    comando.Parameters.AddWithValue("CodTipoAcao", id.ToString());
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 
-                    Acoes acao = null;
+                    TipoAcoes tipoAcao = null;
 
                     while (leitor.NextResult())
                     {
-                        acao = new Acoes();
+                        tipoAcao = new TipoAcoes();
 
-                        acao.CodAcoes = Guid.Parse(leitor["CodAcao"].ToString());
-                        acao.TipoAcao = leitor["TipoAcao"].ToString();
-                        acao.DataInicio = Convert.ToDateTime(leitor["DataInicio"].ToString());
-                        acao.DataFim = Convert.ToDateTime(leitor["DataFim"].ToString());
-                        acao.Status = leitor["Status"].ToString();
+                        tipoAcao.codTipoAcao = Guid.Parse(leitor["CodTipoAcao"].ToString());
+                        tipoAcao.Nome = leitor["Nome"].ToString();
                     }
 
-                    return acao;
+                    return tipoAcao;
                 }
                 catch (Exception ex)
                 {
@@ -137,4 +127,5 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
     }
+    
 }
