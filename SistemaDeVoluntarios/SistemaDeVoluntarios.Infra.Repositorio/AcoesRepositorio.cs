@@ -20,7 +20,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             this.strConexao = strConexao;
         }
 
-        public void Alterar(Acoes acoes, string id)
+        public void Alterar(Acoes acoes, Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -32,7 +32,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.CommandText = "UPDATE Acoes SET Assunto=@Assunto, TipoAcao=@TipoAcao, DataInicio=@DataInicio, DataFim=@DataFim, Status=@Status WHERE CodAcao=@CodAcao ";
 
 
-                    comando.Parameters.AddWithValue("CodAcao", id);
+                    comando.Parameters.AddWithValue("CodAcao", id.ToString());
                     comando.Parameters.AddWithValue("TipoAcao", acoes.TipoAcao);
                     comando.Parameters.AddWithValue("DataInicio", acoes.DataInicio);
                     comando.Parameters.AddWithValue("DataFim", acoes.DataFim);
@@ -48,7 +48,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public void Excluir(string id)
+        public void Excluir(Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -59,7 +59,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.Connection = con;
                     comando.CommandText = "DELETE FROM Acoes WHERE CodAcao=@CodAcao ";
 
-                    comando.Parameters.AddWithValue("CodAcao", id);
+                    comando.Parameters.AddWithValue("CodAcao", id.ToString());
 
                     comando.ExecuteNonQuery();
                 }
@@ -99,7 +99,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public Acoes Procurar(string id)
+        public Acoes Procurar(Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -111,7 +111,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.CommandText = "SELECT * FROM Acoes WHERE CodAcao=@CodAcao ";
 
 
-                    comando.Parameters.AddWithValue("CodAcao", id);
+                    comando.Parameters.AddWithValue("CodAcao", id.ToString());
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 

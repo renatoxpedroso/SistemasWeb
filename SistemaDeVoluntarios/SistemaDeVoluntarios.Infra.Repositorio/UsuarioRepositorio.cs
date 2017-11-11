@@ -57,7 +57,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public void Alterar(Usuarios usuarios, string id)
+        public void Alterar(Usuarios usuarios, Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -69,7 +69,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.CommandText = "UPDATE Usuarios SET TipoUsuario=@TipoUsuario, TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNecimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado WHERE CodUsuario=@CodUsuario ";
                        
 
-                    comando.Parameters.AddWithValue("CodUsuario", id);
+                    comando.Parameters.AddWithValue("CodUsuario", id.ToString());
                     comando.Parameters.AddWithValue("TipoUsuario", usuarios.TipoUsuario);
                     comando.Parameters.AddWithValue("TipoPessoa", usuarios.TipoPessoa);
                     comando.Parameters.AddWithValue("Nome", usuarios.Nome);
@@ -95,7 +95,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public void Excluir(string id)
+        public void Excluir(Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -106,7 +106,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.Connection = con;
                     comando.CommandText = "DELETE FROM Usuarios WHERE CodUsuario=@CodUsuario ";
 
-                    comando.Parameters.AddWithValue("CodUsuario", id);
+                    comando.Parameters.AddWithValue("CodUsuario", id.ToString());
 
                     comando.ExecuteNonQuery();
                 }
@@ -117,7 +117,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public Usuarios Procurar(string id)
+        public Usuarios Procurar(Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -129,7 +129,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.CommandText = "SELECT * FROM Usuarios WHERE CodUsuario=@CodUsuario ";
 
 
-                    comando.Parameters.AddWithValue("CodUsuario", id);
+                    comando.Parameters.AddWithValue("CodUsuario", id.ToString());
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 

@@ -21,19 +21,19 @@ namespace SistemaDeVoluntarios.Infra.Repositorio.Teste
             user.CodUsuario = Guid.NewGuid();
             user.TipoUsuario = 3;
             user.TipoPessoa = 2;
-            user.Nome = "";
-            user.Email = "";
-            user.Senha = "";
-            user.DataNacimento = DateTime.Parse("");
-            user.cpfCnpj = "";
-            user.Telefone = "";
-            user.Celular = "";
-            user.Rua = "";
-            user.Numero = "";
-            user.Bairro = "";
-            user.Cidade = "";
-            user.Cep = 8;
-            user.Estado = "";
+            user.Nome = "Joao";
+            user.Email = "joao@joao.com";
+            user.Senha = "123";
+            user.DataNacimento = DateTime.Parse("1989-01-01");
+            user.cpfCnpj = "21256954152";
+            user.Telefone = "5426568941";
+            user.Celular = "5499168745";
+            user.Rua = "Rua do Joao";
+            user.Numero = "896";
+            user.Bairro = "Joaozinho";
+            user.Cidade = "Joelandia";
+            user.Cep = 88541000;
+            user.Estado = "SC";
 
             try
             {
@@ -45,7 +45,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio.Teste
                 Assert.Fail(ex.Message);
             }
         }
-
+        [TestMethod]
         public void SelectTeste()
         {
             string strConexao = "Server=localhost; Port=5432; Database=SistemaDeVoluntarios; User Id = postgres; Password = postgres; ";
@@ -53,7 +53,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio.Teste
             Usuarios user = new Usuarios();
             UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio(strConexao);
 
-            string CodUsuario = "099cdb61-aca7-4e43-a939-73c24e83179d";
+            Guid CodUsuario = Guid.Parse("099cdb61-aca7-4e43-a939-73c24e83179d");
 
 
             try
@@ -66,7 +66,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio.Teste
                 Assert.Fail(ex.Message);
             }
         }
-
+        [TestMethod]
         public void SelectLoginTeste()
         {
             string strConexao = "Server=localhost; Port=5432; Database=SistemaDeVoluntarios; User Id = postgres; Password = postgres; ";

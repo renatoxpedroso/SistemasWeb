@@ -11,9 +11,9 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
     public interface IAcoesRepositorio
     {
         void Inserir(Acoes acoes);
-        void Alterar(Acoes acoes, string id);
-        void Excluir(string id);
-        Acoes Procurar(string id);
+        void Alterar(Acoes acoes, Guid id);
+        void Excluir(Guid id);
+        Acoes Procurar(Guid id);
 
     }
 }
