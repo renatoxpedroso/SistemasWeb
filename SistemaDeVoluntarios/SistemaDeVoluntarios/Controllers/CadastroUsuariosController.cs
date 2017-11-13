@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 using System.Configuration;
 
-using SistemaDeVoluntarios.Dominio.Entidades;
-using SistemaDeVoluntarios.Dominio.Repositorios;
+using SistemaDeVoluntarios.Dominio;
 using SistemaDeVoluntarios.Infra.Repositorio;
 using SistemaDeVoluntarios.Aplicacao;
+using SistemaDeVoluntarios.Models;
 
 namespace SistemaDeVoluntarios.Controllers
 {

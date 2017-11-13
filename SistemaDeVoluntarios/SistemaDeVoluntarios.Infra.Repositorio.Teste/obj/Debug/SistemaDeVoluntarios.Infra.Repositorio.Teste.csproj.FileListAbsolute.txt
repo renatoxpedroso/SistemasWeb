@@ -8,12 +8,10 @@ C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntari
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.Teste.pdb
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\SistemaDeVoluntarios.Aplicacao.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\SistemaDeVoluntarios.Dominio.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\Npgsql.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\SistemaDeVoluntarios.Aplicacao.pdb
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\SistemaDeVoluntarios.Dominio.pdb
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml

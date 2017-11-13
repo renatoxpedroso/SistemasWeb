@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75763664-3892-4E7A-83FA-1FBBDAD95E29}</ProjectGuid>
+    <ProjectGuid>{221EF003-F4F7-4E3C-853A-5F323CFC283A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SistemaDeVoluntarios.Infra.Repositorio.Teste</RootNamespace>
@@ -55,10 +55,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SistemaDeVoluntarios.Aplicacao\SistemaDeVoluntarios.Aplicacao.csproj">
-      <Project>{2ec474e8-3ec7-46fd-9f6c-4dc8cd979050}</Project>
-      <Name>SistemaDeVoluntarios.Aplicacao</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SistemaDeVoluntarios.Dominio\SistemaDeVoluntarios.Dominio.csproj">
       <Project>{5cdbdce5-5a14-4c93-ae15-77ac490fb4f3}</Project>
       <Name>SistemaDeVoluntarios.Dominio</Name>
