@@ -11,6 +11,5 @@ C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Dominio\obj\Debug\SistemaDeVoluntarios.Dominio.pdb
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Dominio\bin\Debug\SistemaDeVoluntarios.Dominio.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Dominio\bin\Debug\SistemaDeVoluntarios.Dominio.pdb
-C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Dominio\obj\Debug\SistemaDeVoluntarios.Dominio.csprojResolveAssemblyReference.cache
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Dominio\obj\Debug\SistemaDeVoluntarios.Dominio.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Dominio\obj\Debug\SistemaDeVoluntarios.Dominio.pdb

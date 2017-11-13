@@ -14,6 +14,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
     public class UsuarioAdministradorRepositorio : IUsuariosAdministradorRepositorio
     {
         public string strConexao;
+        UsuarioAdministrador user = new UsuarioAdministrador();
 
         public UsuarioAdministradorRepositorio(string strConexao)
         {
@@ -133,11 +134,9 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 
-                    Usuarios user = null;
-
                     while (leitor.NextResult())
                     {
-                        user = new Usuarios();
+                        user = new UsuarioAdministrador();
 
                         user.CodUsuario = Guid.Parse(leitor["CodUsuario"].ToString());
                         user.TipoUsuario = Convert.ToInt16(leitor["TipoUsuario"].ToString());
@@ -183,11 +182,9 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 
-                    Usuarios user = null;
-
                     while (leitor.NextResult())
                     {
-                        user = new Usuarios();
+                        user = new UsuarioAdministrador();
 
                         user.CodUsuario = Guid.Parse(leitor["CodUsuario"].ToString());
                         user.TipoUsuario = Convert.ToInt16(leitor["TipoUsuario"].ToString());
@@ -215,6 +212,5 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                 }
             }
         }
-    }
-    }
+    }   
 }

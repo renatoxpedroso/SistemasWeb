@@ -21,7 +21,6 @@ C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\obj\Debug\SistemaDeVoluntarios.Servico.csproj.CoreCompileInputs.cache
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\obj\Debug\SistemaDeVoluntarios.Servico.dll
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\obj\Debug\SistemaDeVoluntarios.Servico.pdb
-C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\obj\Debug\SistemaDeVoluntarios.Servico.csprojResolveAssemblyReference.cache
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\bin\Debug\SistemaDeVoluntarios.Servico.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\bin\Debug\SistemaDeVoluntarios.Servico.pdb
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\bin\Debug\SistemaDeVoluntarios.Aplicacao.dll
@@ -34,5 +33,6 @@ C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntari
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\bin\Debug\SistemaDeVoluntarios.Infra.Repositorio.pdb
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\bin\Debug\Npgsql.xml
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\obj\Debug\SistemaDeVoluntarios.Servico.csprojResolveAssemblyReference.cache
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\obj\Debug\SistemaDeVoluntarios.Servico.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Servico\obj\Debug\SistemaDeVoluntarios.Servico.pdb
