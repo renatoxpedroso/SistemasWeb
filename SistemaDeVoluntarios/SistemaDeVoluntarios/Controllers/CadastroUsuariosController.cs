@@ -13,7 +13,7 @@ using SistemaDeVoluntarios.Models;
 
 namespace SistemaDeVoluntarios.Controllers
 {
-    [Filtro.FiltroAcess]
+    
     public class CadastroUsuariosController : Controller
     {
         // GET: CadastroUsuarios
