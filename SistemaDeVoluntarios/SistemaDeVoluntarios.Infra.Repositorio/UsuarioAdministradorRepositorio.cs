@@ -33,7 +33,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.CommandText = "INSERT INTO Usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado) " +
                         "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado);";
 
-                    comando.Parameters.AddWithValue("CodUsuario", usuariosAdministrador.CodUsuario);
+                    comando.Parameters.AddWithValue("CodUsuario", Guid.NewGuid());
                     comando.Parameters.AddWithValue("TipoUsuario", 3);
                     comando.Parameters.AddWithValue("TipoPessoa", usuariosAdministrador.TipoPessoa);
                     comando.Parameters.AddWithValue("Nome", usuariosAdministrador.Nome);
@@ -165,7 +165,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public UsuarioAdministrador ProcurarLogin(string Email, string Senha)
+       /* public UsuarioAdministrador ProcurarLogin(string Email, string Senha)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -211,6 +211,6 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     throw ex;
                 }
             }
-        }
+        }*/
     }   
 }

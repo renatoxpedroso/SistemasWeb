@@ -32,7 +32,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.CommandText = "INSERT INTO Usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado) "+
                         "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado);";
 
-                    comando.Parameters.AddWithValue("CodUsuario", usuarios.CodUsuario);
+                    comando.Parameters.AddWithValue("CodUsuario", Guid.NewGuid());
                     comando.Parameters.AddWithValue("TipoUsuario", usuarios.TipoUsuario);
                     comando.Parameters.AddWithValue("TipoPessoa", usuarios.TipoPessoa);
                     comando.Parameters.AddWithValue("Nome", usuarios.Nome);

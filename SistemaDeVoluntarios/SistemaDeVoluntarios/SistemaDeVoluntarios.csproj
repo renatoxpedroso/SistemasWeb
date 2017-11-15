@@ -13706,6 +13706,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuarios.cs" />
+    <Compile Include="Models\UsuariosAdministrador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

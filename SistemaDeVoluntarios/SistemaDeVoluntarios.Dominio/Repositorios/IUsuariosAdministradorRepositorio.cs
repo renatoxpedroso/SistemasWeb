@@ -13,6 +13,6 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
         void Alterar(UsuarioAdministrador usuariosAdministrador, Guid id);
         void Excluir(Guid id);
         UsuarioAdministrador Procurar(Guid id);
-        UsuarioAdministrador ProcurarLogin(string Email, string Senha);
+        //UsuarioAdministrador ProcurarLogin(UsuarioAdministrador usuariosAdministrador);
     }
 }
