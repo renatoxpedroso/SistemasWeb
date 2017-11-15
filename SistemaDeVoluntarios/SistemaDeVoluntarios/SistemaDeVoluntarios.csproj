@@ -13691,8 +13691,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AcaoUsuarioController.cs" />
     <Compile Include="Controllers\AcoesController.cs" />
+    <Compile Include="Controllers\AcoesUsuariosController.cs" />
     <Compile Include="Controllers\CadastroAcoesController.cs" />
     <Compile Include="Controllers\CadastroAdministradoresController.cs" />
     <Compile Include="Controllers\CadastroUsuariosController.cs" />
@@ -13810,9 +13810,9 @@
     <Content Include="Views\Acoes\IndexAcoesRecentes.cshtml" />
     <Content Include="Views\Acoes\IndexAcoesAndamento.cshtml" />
     <Content Include="Views\Acoes\IndexAcoesConcluidas.cshtml" />
-    <Content Include="Views\AcaosUsuario\IndexAcoesRecentes.cshtml" />
-    <Content Include="Views\AcaosUsuario\IndexAcoesAndamento.cshtml" />
-    <Content Include="Views\AcaosUsuario\IndexAcoesConcluidas.cshtml" />
+    <Content Include="Views\AcoesUsuarios\IndexAcoesUsuariosAndamento.cshtml" />
+    <Content Include="Views\AcoesUsuarios\IndexAcoesUsuariosConcluidas.cshtml" />
+    <Content Include="Views\AcoesUsuarios\IndexAcoesUsuariosRecentes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SistemaDeVoluntarios.Controllers
 {
-    [Filtro.FiltroAcess]
+    //[Filtro.FiltroAcess]
     public class IndexUsuarioController : Controller
     {
         // GET: IndexUsuario

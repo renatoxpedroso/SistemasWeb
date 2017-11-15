@@ -35,7 +35,6 @@
     <![endif]-->
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -43,8 +42,9 @@
             <!-- Logo -->
             <a href="#" class="logo">
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg">Voluntários</span>
+                <span class="logo-lg"><b>Voluntários</b></span>
             </a>
+
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
                 <!-- Sidebar toggle button-->
@@ -52,6 +52,7 @@
                     <span class="sr-only">Toggle navigation</span>
                 </a>
             </nav>
+
         </header>
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
@@ -85,9 +86,9 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="/AcoesUsuario/IndexAcoesRecentes"><i class="fa fa-circle-o"></i> Recentes</a></li>
-                            <li><a href="/AcoesUsuario/IndexAcoesAndamento"><i class="fa fa-circle-o"></i> Em Andamento</a></li>
-                            <li><a href="/AcoesUsuario/IndexAcoesConcluidas"><i class="fa fa-circle-o"></i> Concluidas</a></li>
+                            <li><a href="/AcoesUsuarios/IndexAcoesUsuariosRecentes"><i class="fa fa-circle-o"></i> Recentes</a></li>
+                            <li><a href="/AcoesUsuarios/IndexAcoesUsuariosAndamento"><i class="fa fa-circle-o"></i> Em Andamento</a></li>
+                            <li><a href="/AcoesUsuarios/IndexAcoesUsuariosConcluidas"><i class="fa fa-circle-o"></i> Concluidas</a></li>
                         </ul>
                     </li>
                     <!-- Menu de aceitação de usuarios-->
@@ -104,10 +105,9 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Perfil do Usuário
+                    Ações Concluídas
                 </h1>
             </section>
-
             <!-- Main content -->
             <section class="content">
                 <!-- /.row -->
@@ -159,21 +159,23 @@
                                 </br>
                                 <div class="form-inline row">
                                     <label>Cidade: </label>&nbsp&nbsp&nbsp&nbsp
-                                    <select size="1">
+                                    <input type="text" required="required" class="form-control" id="cidade">
+                                    <!--<select size="1">
                                         <option selected value="Selecione">Selecione</option>
                                         <option value="opcao1">Caxias do Sul</option>
                                         <option value="opcao1">Farroupilha</option>
                                         <option value="opcao1">Florianopolis</option>
-                                    </select>
+                                    </select>-->
                                 </div>
                                 </br>
                                 <div class="form-inline row">
                                     <label>Estado: </label>&nbsp&nbsp&nbsp&nbsp
-                                    <select size="1">
+                                    <input type="text" required="required" class="form-control" id="estado">
+                                    <!--<select size="1">
                                         <option selected value="Selecione">Selecione</option>
                                         <option value="opcao1">RS</option>
                                         <option value="opcao1">SC</option>
-                                    </select>
+                                    </select>-->
                                 </div>
                                 </br>
                                 <div class="form-inline row">
@@ -188,509 +190,28 @@
 
                         <!-- /.input group -->
                         <!-- /.box-body -->
-                        <div style="margin-left:50px;" class="btn-group">
+                        <!--<div style="margin-left:50px;" class="btn-group">
                             <button type="button" class="btn btn-primary">Limpar</button>
                             <button type="button" class="btn btn-primary">Cadastrar</button>
-                        </div>
+                        </div>-->
                         </form>
                 </div>
                 <!-- /.box -->
-        </div>
-        <!--/.col (right) -->
-    </div>
-    <!-- /.row -->
-    </section>
-    <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
-        </div>
-        <strong>Copyright &copy; 2017-2017.</strong> All rights reserved.
-    </footer>
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Recent Activity</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                                <p>Will be 23 on April 24th</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-user bg-yellow"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                                <p>New phone +1(800)555-1234</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                                <p>nora@example.com</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                                <p>Execution time 5 seconds</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-                <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Custom Template Design
-                                <span class="label label-danger pull-right">70%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Update Resume
-                                <span class="label label-success pull-right">95%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Laravel Integration
-                                <span class="label label-warning pull-right">50%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <h4 class="control-sidebar-subheading">
-                                Back End Framework
-                                <span class="label label-primary pull-right">68%</span>
-                            </h4>
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
             </div>
-            <!-- /.tab-pane -->
-            <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-            <!-- /.tab-pane -->
-            <!-- Settings tab content -->
-            <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
-                    <h3 class="control-sidebar-heading">General Settings</h3>
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Report panel usage
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Some information about this general settings option
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Allow mail redirect
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Other sets of options are available
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Expose author name in posts
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                        <p>
-                            Allow the user to show his name in blog posts
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-                    <h3 class="control-sidebar-heading">Chat Settings</h3>
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Show me as online
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Turn off notifications
-                            <input type="checkbox" class="pull-right">
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Delete chat history
-                            <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                        </label>
-                    </div>
-                    <!-- /.form-group -->
-                </form>
-                <label>Tipo de Usuário</label>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Entidade
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                        Voluntário
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Dados Pessoais</h3>
-                </div>
-                <label>Tipo de Pessoa</label>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Física
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                        Jurídica
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group form-group-lg">
-            <label>Nome*</label>
-            <input type="text" required="required" class="form-control" id="nome" placeholder="Nome Usuário">
-        </div>
-        <div class="form-group  form-group-lg">
-            <label>E-mail*</label>
-            <input type="email" required="required" class="form-control" id="email" placeholder="E-mail">
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Senha*</label>
-            <input type="password" required="required" class="form-control" id="senha" placeholder="Senha">
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Data Nascimento</label>
-            <div class="input-group form-group-lg date ">
-                <div class="input-group-addon" form-group-lg>
-                    <i class="fa fa-calendar"></i>
-                </div>
-                <input type="text" class="form-control pull-right form-group-lg" id="datepicker">
-            </div>
-            <!-- /.input group -->
-        </div>
-
-        <div class="form-group form-group-lg">
-            <label>CPF*</label>
-            <input type="text" required="required" class="form-control" id="cpf" placeholder="CPF">
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Telefone</label>
-            <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Celular*</label>
-            <input type="tel" required="required" class="form-control" id="celular" placeholder="Celular">
-        </div>
-
-        <div class="form-group form-group-lg">
-            <div class="box-header with-border">
-                <h3 class="box-title">Endereço</h3>
-            </div>
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Rua*</label>
-            <input type="text" required="required" class="form-control" id="rua" placeholder="Rua">
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Numero*</label>
-            <input type="numeric" required="required" class="form-control" id="numero" placeholder="Numero">
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Bairro*</label>
-            <input type="text" required="required" class="form-control" id="bairro" placeholder="Bairro">
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Estado*</label>
-            <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Selecione um estado
-                    <span class="fa fa-caret-down"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Rio Grande Do Sul</a></li>
-                    <li><a href="#">São Paulo</a></li>
-                    <li><a href="#">Santa Catarina</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="form-group form-group-lg">
-            <label>Cidade*</label>
-            <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Selecione uma cidade
-                    <span class="fa fa-caret-down"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Caxias do Sul</a></li>
-                    <li><a href="#">São Marcos</a></li>
-                    <li><a href="#">Flores da Cunha</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="form-group form-group-lg">
-            <label>CEP*</label>
-            <input type="tel" required="required" class="form-control" id="cep" placeholder="CEP">
-        </div>
-        </div>
-        <!-- /.box-body -->
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary">Limpar</button>
-            <button type="button" class="btn btn-primary">Cadastrar</button>
-        </div>
-        </form>
-        </div>
-        <!-- /.box -->
-        </div>
-        <!--/.col (right) -->
+            <!--/.col (right) -->
         </div>
         <!-- /.row -->
         </section>
-        <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 2.4.0
-            </div>
-            <strong>Copyright &copy; 2017-2017.</strong> All rights reserved.
-        </footer>
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Create the tabs -->
-            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- Home tab content -->
-                <div class="tab-pane" id="control-sidebar-home-tab">
-                    <h3 class="control-sidebar-heading">Recent Activity</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                                    <p>Will be 23 on April 24th</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="menu-icon fa fa-user bg-yellow"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                                    <p>New phone +1(800)555-1234</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                                    <p>nora@example.com</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                                    <p>Execution time 5 seconds</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h4 class="control-sidebar-subheading">
-                                    Custom Template Design
-                                    <span class="label label-danger pull-right">70%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h4 class="control-sidebar-subheading">
-                                    Update Resume
-                                    <span class="label label-success pull-right">95%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h4 class="control-sidebar-subheading">
-                                    Laravel Integration
-                                    <span class="label label-warning pull-right">50%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <h4 class="control-sidebar-subheading">
-                                    Back End Framework
-                                    <span class="label label-primary pull-right">68%</span>
-                                </h4>
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-                </div>
-                <!-- /.tab-pane -->
-                <!-- Stats tab content -->
-                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-                <!-- /.tab-pane -->
-                <!-- Settings tab content -->
-                <div class="tab-pane" id="control-sidebar-settings-tab">
-                    <form method="post">
-                        <h3 class="control-sidebar-heading">General Settings</h3>
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Report panel usage
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                            <p>
-                                Some information about this general settings option
-                            </p>
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Allow mail redirect
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                            <p>
-                                Other sets of options are available
-                            </p>
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Expose author name in posts
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                            <p>
-                                Allow the user to show his name in blog posts
-                            </p>
-                        </div>
-                        <!-- /.form-group -->
-                        <h3 class="control-sidebar-heading">Chat Settings</h3>
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Show me as online
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Turn off notifications
-                                <input type="checkbox" class="pull-right">
-                            </label>
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Delete chat history
-                                <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                            </label>
-                        </div>
-                        <!-- /.form-group -->
-                    </form>
-                    <div class="box-footer clearfix no-border">
-                        <a href="/CadastroAcoes/IndexUsuario" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add nova ação</a>
-                    </div>
-                </div>
-                </section>
-                <!-- right col -->
-            </div>
-            <!-- /.row (main row) -->
-            </section>
-            <!-- /.content -->
-            </div>
-            <!-- /.content-wrapper -->
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
             <b>Version</b> 1.0.0
         </div>
         <strong>Copyright &copy; 2017-2017 </strong> - All rights reserved.
     </footer>
+
     <div class="control-sidebar-bg"></div>
     </div>
     <!-- ./wrapper -->
@@ -733,4 +254,3 @@
     <script src="~/Scripts/dist/js/demo.js"></script>
 </body>
 </html>
-

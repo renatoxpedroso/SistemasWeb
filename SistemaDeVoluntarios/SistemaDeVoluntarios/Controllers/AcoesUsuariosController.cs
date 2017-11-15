@@ -6,21 +6,20 @@ using System.Web.Mvc;
 
 namespace SistemaDeVoluntarios.Controllers
 {
-    [Filtro.FiltroAcess]
-    public class AcaoUsuarioController : Controller
+    public class AcoesUsuariosController : Controller
     {
-        // GET: AcaoUsuarios
-        public ActionResult IndexAcoesRecentes()
+        // GET: AcoesUsuarios
+        public ActionResult IndexAcoesUsuariosAndamento()
         {
             return View();
         }
 
-        public ActionResult IndexAcoesAndamento()
+        public ActionResult IndexAcoesUsuariosConcluidas()
         {
             return View();
         }
 
-        public ActionResult IndexAcoesConcluidas()
+        public ActionResult IndexAcoesUsuariosRecentes()
         {
             return View();
         }

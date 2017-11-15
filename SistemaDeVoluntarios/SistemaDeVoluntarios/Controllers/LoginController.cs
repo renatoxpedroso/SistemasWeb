@@ -45,9 +45,19 @@ namespace SistemaDeVoluntarios.Controllers
 
             if (usuario == users.Email && senha == users.Senha)
             {
-                Session["usuario"] = usuario;
+                if ((users.TipoUsuario.Equals(1)) || (users.TipoUsuario.Equals(2)))
+                {
+                    Session["usuario"] = usuario;
 
-                return RedirectToAction("Index", "Index");
+                    return RedirectToAction("Index", "IndexUsuario");
+                }
+                else
+                {
+                    Session["usuario"] = usuario;
+
+                    return RedirectToAction("Index", "Index");
+                }
+               
             }
             else
             {
