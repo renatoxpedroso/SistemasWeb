@@ -20,12 +20,14 @@ namespace SistemaDeVoluntarios.Aplicacao
 
         public void Inserir(Usuarios usuarios)
         {
-            if (string.IsNullOrEmpty(usuarios.Nome))
-            {
-                throw new Exception("O produto está sem nome!");
-            }
-
             this.usuarioRepositorio.Inserir(usuarios);
+        }
+
+        public Usuarios ProcurarLogin(Usuarios usuarios)
+        {
+            Usuarios users;
+            users = usuarioRepositorio.ProcurarLogin(usuarios);
+            return users;
         }
     }
 }

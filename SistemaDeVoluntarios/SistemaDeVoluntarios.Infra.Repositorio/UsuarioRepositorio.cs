@@ -166,7 +166,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public Usuarios ProcurarLogin(string Email, string Senha)
+        public Usuarios ProcurarLogin(Usuarios usuarios)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -175,17 +175,17 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "SELECT * FROM Usuarios WHERE Email=@Email and Senha=@Senha ";
+                    comando.CommandText = "SELECT * FROM usuarios WHERE email=@Email and senha=@Senha ";
 
 
-                    comando.Parameters.AddWithValue("Email", Email);
-                    comando.Parameters.AddWithValue("Senha", Senha);
+                    comando.Parameters.AddWithValue("Email", usuarios.Email);
+                    comando.Parameters.AddWithValue("Senha", usuarios.Senha);
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 
                     Usuarios user = null;
 
-                    while (leitor.NextResult())
+                    while (leitor.Read())
                     {
                         user = new Usuarios();
 
@@ -203,7 +203,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         user.Numero = leitor["Numero"].ToString();
                         user.Bairro = leitor["Bairro"].ToString();
                         user.Cidade = leitor["Cidade"].ToString();
-                        user.Cep = Convert.ToInt16(leitor["Cep"].ToString());
+                        user.Cep = Convert.ToInt32(leitor["Cep"].ToString());
                         user.Estado = leitor["Estado"].ToString();
                     }
 

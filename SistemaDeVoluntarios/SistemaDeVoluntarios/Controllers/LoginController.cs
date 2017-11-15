@@ -4,6 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using System.Configuration;
+
+using SistemaDeVoluntarios.Dominio;
+using SistemaDeVoluntarios.Infra.Repositorio;
+using SistemaDeVoluntarios.Dominio.Entidades;
+using SistemaDeVoluntarios.Aplicacao;
+
 namespace SistemaDeVoluntarios.Controllers
 {
     public class LoginController : Controller
@@ -17,7 +24,26 @@ namespace SistemaDeVoluntarios.Controllers
         [HttpPost]
         public ActionResult Login(String usuario, String senha)
         {
-            if (usuario == "renato@renato.com" && senha == "123")
+            Dominio.Entidades.Usuarios user;
+            UsuarioRepositorio usuarioRepositorio;
+            UsuarioAplicacao usuarioAplicacao;
+
+            string strConexao = ConfigurationManager.ConnectionStrings["conexao"].ToString();
+
+            usuarioRepositorio = new UsuarioRepositorio(strConexao);
+
+            usuarioAplicacao = new UsuarioAplicacao(usuarioRepositorio);
+
+
+            user = new Dominio.Entidades.Usuarios()
+            {
+                Email = usuario,
+                Senha = senha
+            };
+
+            Usuarios users = usuarioAplicacao.ProcurarLogin(user);
+
+            if (usuario == users.Email && senha == users.Senha)
             {
                 Session["usuario"] = usuario;
 
