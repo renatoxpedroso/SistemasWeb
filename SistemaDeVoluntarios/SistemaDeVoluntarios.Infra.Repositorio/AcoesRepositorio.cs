@@ -29,14 +29,14 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "INSERT INTO Acoes (CodAcao, Assunto, TipoAcao, DataInicio, DataFim, Status) " +
-                        "Values(@CodAcao, @Assunto, @TipoAcao, @DataInicio, @DataFim, @Status);";
+                    comando.CommandText = "INSERT INTO Acoes (CodAcao, Assunto, TipoAcao, DatInicio, DatFim, Status) " +
+                        "Values(@CodAcao, @Assunto, @TipoAcao, @DatInicio, @DatFim, @Status);";
 
-                    comando.Parameters.AddWithValue("CodAcao", acoes.CodAcoes);
+                    comando.Parameters.AddWithValue("CodAcao", Guid.NewGuid());
                     comando.Parameters.AddWithValue("Assunto", acoes.Assunto);
                     comando.Parameters.AddWithValue("TipoAcao", acoes.TipoAcao);
-                    comando.Parameters.AddWithValue("DataInicio", acoes.DataInicio);
-                    comando.Parameters.AddWithValue("DataFim", acoes.DataFim);
+                    comando.Parameters.AddWithValue("DatInicio", acoes.DatInicio);
+                    comando.Parameters.AddWithValue("DatFim", acoes.DatFim);
                     comando.Parameters.AddWithValue("Status", acoes.Status);
   
 
@@ -58,13 +58,13 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "UPDATE Acoes SET Assunto=@Assunto, TipoAcao=@TipoAcao, DataInicio=@DataInicio, DataFim=@DataFim, Status=@Status WHERE CodAcao=@CodAcao ";
+                    comando.CommandText = "UPDATE Acoes SET Assunto=@Assunto, TipoAcao=@TipoAcao, DatInicio=@DatInicio, DatFim=@DatFim, Status=@Status WHERE CodAcao=@CodAcao ";
 
 
                     comando.Parameters.AddWithValue("CodAcao", id.ToString());
                     comando.Parameters.AddWithValue("TipoAcao", acoes.TipoAcao);
-                    comando.Parameters.AddWithValue("DataInicio", acoes.DataInicio);
-                    comando.Parameters.AddWithValue("DataFim", acoes.DataFim);
+                    comando.Parameters.AddWithValue("DatInicio", acoes.DatInicio);
+                    comando.Parameters.AddWithValue("DatFim", acoes.DatFim);
                     comando.Parameters.AddWithValue("Status", acoes.Status);
 
 
@@ -123,8 +123,8 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
 
                         acao.CodAcoes = Guid.Parse(leitor["CodAcao"].ToString());
                         acao.TipoAcao = leitor["TipoAcao"].ToString();
-                        acao.DataInicio = Convert.ToDateTime(leitor["DataInicio"].ToString());
-                        acao.DataFim = Convert.ToDateTime(leitor["DataFim"].ToString());
+                        acao.DatInicio = Convert.ToDateTime(leitor["DatInicio"].ToString());
+                        acao.DatFim = Convert.ToDateTime(leitor["DatFim"].ToString());
                         acao.Status = leitor["Status"].ToString();
                     }
 

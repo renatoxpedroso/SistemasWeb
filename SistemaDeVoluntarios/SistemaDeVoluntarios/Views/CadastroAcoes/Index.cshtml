@@ -134,7 +134,7 @@
                         <div class="box box-primary">
                             <!-- /.box-header -->
                             <!-- form start -->
-                            <form class="form" method="post" action="/CadastroUsuarios/Gravar">
+                            <form class="form" method="post" action="/CadastroAcoes/Gravar">
                                 <div style="margin-left:50px;" class="box-body">
 
                                     <div class="form-group">
@@ -146,7 +146,7 @@
 
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="status" id="status" value="1"> Ativa
+                                                <input class="form-check-input" type="radio" name="status" id="status" value="1" checked> Ativa
                                             </label>
                                         </div>
 
@@ -159,26 +159,26 @@
 
                                    
                                     <div class="form-group row">
-                                        <label for="descricao" class="col-sm-2 col-form-label">Descrição da Ação</label>
+                                        <label for="assunto" class="col-sm-2 col-form-label">Descrição da Ação</label>
                                         <div class="col-sm-5 rows ">
                                             <!--<input type="text" required="required" class="form-control" name="descricao" id="descricao" placeholder="Descrição">-->
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            <textarea class="form-control" name="assunto" id="assunto" rows="3"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="datainicio" class="col-lg-2 col-form-label">Data de Inicio</label>
+                                        <label for="datinicio" class="col-lg-2 col-form-label">Data de Inicio</label>
 
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control pull-right form-group-lg" nome="datainicio" id="datainicio" placeholder="Data de Inicio">
+                                            <input type="text" class="form-control pull-right form-group-lg" nome="datinicio" id="datinicio" placeholder="Data de Inicio">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="datafim" class="col-lg-2 col-form-label">Data de Fim</label>
+                                        <label for="datfim" class="col-lg-2 col-form-label">Data de Fim</label>
 
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control pull-right form-group-lg" nome="datafim" id="datafim" placeholder="Data de Fim">
+                                            <input type="text" class="form-control pull-right form-group-lg" nome="datfim" id="datfim" placeholder="Data de Fim">
                                         </div>
                                     </div>
 

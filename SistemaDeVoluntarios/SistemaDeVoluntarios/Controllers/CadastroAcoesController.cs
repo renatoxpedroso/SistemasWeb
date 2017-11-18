@@ -28,27 +28,30 @@ namespace SistemaDeVoluntarios.Controllers
         }
 
         [HttpPost]
-        public ActionResult Gravar(TipoAcoes tipo)
+        public ActionResult Gravar(Acoes acoes)
         {
-            Dominio.Entidades.TipoAcoes tipoAcoes;
-            TipoAcoesRepositorio tipoAcoesRepositorio;
-            TipoAcoesAplicacao tipoAcoesAplicacao;
+            Dominio.Entidades.Acoes acao;
+            AcoesRepositorio acaoRepositorio;
+            AcoesAplicacao acaoAplicacao;
 
             string strConexao = ConfigurationManager.ConnectionStrings["conexao"].ToString();
 
-            tipoAcoesRepositorio = new TipoAcoesRepositorio(strConexao);
+            acaoRepositorio = new AcoesRepositorio(strConexao);
 
-            tipoAcoesAplicacao = new TipoAcoesAplicacao(tipoAcoesRepositorio);
+            acaoAplicacao = new AcoesAplicacao(acaoRepositorio);
 
 
-            tipoAcoes = new Dominio.Entidades.TipoAcoes()
+            acao = new Dominio.Entidades.Acoes()
             {
-                //codTipoAcao = tipo.codTipoAcao,
-                Nome = tipo.Nome,
+                Status = acoes.Status,
+                Assunto = acoes.Assunto,
+                DatInicio = acoes.DatInicio,
+                DatFim = acoes.DatFim,
+                TipoAcao = acoes.TipoAcao
 
             };
 
-            tipoAcoesAplicacao.Inserir(tipoAcoes);
+            acaoAplicacao.Inserir(acao);
 
             return RedirectToAction("index");
         }

@@ -11,8 +11,8 @@ namespace SistemaDeVoluntarios.Dominio.Entidades
         public Guid CodAcoes { get; set; }
         public string Assunto { get; set; }
         public string TipoAcao { get; set; }
-        public DateTime DataInicio { get; set; }
-        public DateTime DataFim { get; set; }
+        public DateTime DatInicio { get; set; }
+        public DateTime DatFim { get; set; }
         public string Status { get; set; }
     }
 }
