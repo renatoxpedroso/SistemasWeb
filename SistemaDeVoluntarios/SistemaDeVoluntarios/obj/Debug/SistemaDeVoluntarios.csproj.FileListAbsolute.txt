@@ -221,3 +221,13 @@ C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntari
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\pt-br\System.Web.Mvc.resources.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\obj\Debug\SistemaDeVoluntarios.dll
 C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\obj\Debug\SistemaDeVoluntarios.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\SistemaDeVoluntarios.Aplicacao.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\SistemaDeVoluntarios.Dominio.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\SistemaDeVoluntarios.Infra.Repositorio.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\Npgsql.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\SistemaDeVoluntarios.Aplicacao.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\SistemaDeVoluntarios.Dominio.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\SistemaDeVoluntarios.Infra.Repositorio.pdb
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\Npgsql.xml
+C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios\bin\System.Threading.Tasks.Extensions.xml
