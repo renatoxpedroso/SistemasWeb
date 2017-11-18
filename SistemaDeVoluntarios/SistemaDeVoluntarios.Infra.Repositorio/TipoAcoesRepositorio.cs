@@ -29,11 +29,11 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "INSERT INTO Tipo_Acoes (CodTipoAcao, Nome) " +
+                    comando.CommandText = "INSERT INTO tipo_acao (CodTipoAcao, Nome) " +
                         "Values(@CodTipoAcao, @Nome);";
 
-                    comando.Parameters.AddWithValue("CodTipoAcao", tipoAcoes.codTipoAcao);
-                    comando.Parameters.AddWithValue("AssuNomento", tipoAcoes.Nome);
+                    comando.Parameters.AddWithValue("CodTipoAcao", Guid.NewGuid());
+                    comando.Parameters.AddWithValue("Nome", tipoAcoes.Nome);
 
 
                     comando.ExecuteNonQuery();

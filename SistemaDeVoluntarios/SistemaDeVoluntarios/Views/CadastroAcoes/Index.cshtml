@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadastro de Ações</title>
+    <title>Sistema de Voluntários</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -17,7 +17,16 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="~/Scripts/dist/css/skins/_all-skins.min.css">
-
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="~/Scripts/bower_components/morris.js/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="~/Scripts/bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="~/Scripts/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="~/Scripts/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="~/Scripts/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,25 +38,20 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-
         <header class="main-header">
             <!-- Logo -->
-            <a href="../../index.html" class="logo">
+            <a href="#" class="logo">
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>Voluntários</b></span>
+                <span class="logo-lg">Voluntários</span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
                 <!-- Sidebar toggle button-->
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                 </a>
             </nav>
         </header>
-
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
             <!-- sidebar: style can be found in sidebar.less -->
@@ -81,6 +85,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
+                            <li><a href="/CadastroAcoes/Index"><i class="fa fa-circle-o"></i> Nova Ação</a></li>
                             <li><a href="/Acoes/IndexAcoesRecentes"><i class="fa fa-circle-o"></i> Recentes</a></li>
                             <li><a href="/Acoes/IndexAcoesAndamento"><i class="fa fa-circle-o"></i> Em Andamento</a></li>
                             <li><a href="/Acoes/IndexAcoesConcluidas"><i class="fa fa-circle-o"></i> Concluidas</a></li>
@@ -105,56 +110,106 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="/TiposAcoes/Index"><i class="fa fa-circle-o"></i> Todas</a></li>
-                            <!--<li><a href="../../pages/UI/cadastro_acoes.html"><i class="fa fa-circle-o"></i> Novas Ações</a></li>-->
+                            <li><a href="/TiposAcoes/Nova"><i class="fa fa-circle-o"></i> Novos Tipo de Ações</a></li>
                         </ul>
                     </li>
                 </ul>
             </section>
             <!-- /.sidebar -->
         </aside>
-
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Cadastro de Ações
+                    Home
                 </h1>
             </section>
-
             <!-- Main content -->
             <section class="content">
                 <div class="row">
-                    <!--/.col (left) -->
-                    <!-- right column -->
+                    <!-- left column -->
                     <div class="col-md-15">
-                        <!-- Horizontal Form -->
-                        <div class="box box-info">
+                        <!-- general form elements -->
+                        <div class="box box-primary">
                             <!-- /.box-header -->
                             <!-- form start -->
-                            <form class="form-horizontal">
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Nome da Ação</label>
+                            <form class="form" method="post" action="/CadastroUsuarios/Gravar">
+                                <div style="margin-left:50px;" class="box-body">
 
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" placeholder="Nome da Ação">
+                                    <div class="form-group">
+                                        <div class="box-header with-border">
+                                            <h3 class="box-title">Cadastro de Ação</h3>
+                                        </div>
+
+                                        <label for="status">Status</label>
+
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="status" id="status" value="1"> Ativa
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="status" id="status" value="2"> Inativa
+                                            </label>
                                         </div>
                                     </div>
+
+                                   
+                                    <div class="form-group row">
+                                        <label for="descricao" class="col-sm-2 col-form-label">Descrição da Ação</label>
+                                        <div class="col-sm-5 rows ">
+                                            <!--<input type="text" required="required" class="form-control" name="descricao" id="descricao" placeholder="Descrição">-->
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="datainicio" class="col-lg-2 col-form-label">Data de Inicio</label>
+
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control pull-right form-group-lg" nome="datainicio" id="datainicio" placeholder="Data de Inicio">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="datafim" class="col-lg-2 col-form-label">Data de Fim</label>
+
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control pull-right form-group-lg" nome="datafim" id="datafim" placeholder="Data de Fim">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="tipoacao" class="col-lg-2 col-form-label">Tipo da Ação</label>
+
+                                        <div class="col-sm-4">
+                                            <select class="form-control" name="tipoacao" id="tipoacao">
+                                                <option>Pintar Igreja</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-group row">
+                                        <button type="button" class="btn btn-primary">Limpar</button>
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                    </div>
+
+
                                 </div>
-                                <!-- /.box-body -->
-                                <div class="box-footer">
-                                    <button type="submit" class="btn btn-info pull-right">Salvar</button>
-                                </div>
-                                <!-- /.box-footer -->
+
                             </form>
                         </div>
-                        <!-- /.box -->
+                        <!-- /.box-body -->
                     </div>
-                    <!--/.col (right) -->
+                    <!-- /.box -->
                 </div>
-                <!-- /.row -->
-            </section>
+                <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+        </section>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
@@ -164,7 +219,6 @@
             </div>
             <strong>Copyright &copy; 2017-2017 - All rights reserved.
         </footer>
-
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Create the tabs -->
@@ -181,10 +235,8 @@
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
                                 <div class="menu-info">
                                     <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
                                     <p>Will be 23 on April 24th</p>
                                 </div>
                             </a>
@@ -192,10 +244,8 @@
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="menu-icon fa fa-user bg-yellow"></i>
-
                                 <div class="menu-info">
                                     <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
                                     <p>New phone +1(800)555-1234</p>
                                 </div>
                             </a>
@@ -203,10 +253,8 @@
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
                                 <div class="menu-info">
                                     <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
                                     <p>nora@example.com</p>
                                 </div>
                             </a>
@@ -214,17 +262,14 @@
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
                                 <div class="menu-info">
                                     <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
                                     <p>Execution time 5 seconds</p>
                                 </div>
                             </a>
                         </li>
                     </ul>
                     <!-- /.control-sidebar-menu -->
-
                     <h3 class="control-sidebar-heading">Tasks Progress</h3>
                     <ul class="control-sidebar-menu">
                         <li>
@@ -233,7 +278,6 @@
                                     Custom Template Design
                                     <span class="label label-danger pull-right">70%</span>
                                 </h4>
-
                                 <div class="progress progress-xxs">
                                     <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
                                 </div>
@@ -245,7 +289,6 @@
                                     Update Resume
                                     <span class="label label-success pull-right">95%</span>
                                 </h4>
-
                                 <div class="progress progress-xxs">
                                     <div class="progress-bar progress-bar-success" style="width: 95%"></div>
                                 </div>
@@ -257,7 +300,6 @@
                                     Laravel Integration
                                     <span class="label label-warning pull-right">50%</span>
                                 </h4>
-
                                 <div class="progress progress-xxs">
                                     <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
                                 </div>
@@ -269,7 +311,6 @@
                                     Back End Framework
                                     <span class="label label-primary pull-right">68%</span>
                                 </h4>
-
                                 <div class="progress progress-xxs">
                                     <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
                                 </div>
@@ -277,7 +318,6 @@
                         </li>
                     </ul>
                     <!-- /.control-sidebar-menu -->
-
                 </div>
                 <!-- /.tab-pane -->
                 <!-- Stats tab content -->
@@ -287,45 +327,37 @@
                 <div class="tab-pane" id="control-sidebar-settings-tab">
                     <form method="post">
                         <h3 class="control-sidebar-heading">General Settings</h3>
-
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
                                 Report panel usage
                                 <input type="checkbox" class="pull-right" checked>
                             </label>
-
                             <p>
                                 Some information about this general settings option
                             </p>
                         </div>
                         <!-- /.form-group -->
-
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
                                 Allow mail redirect
                                 <input type="checkbox" class="pull-right" checked>
                             </label>
-
                             <p>
                                 Other sets of options are available
                             </p>
                         </div>
                         <!-- /.form-group -->
-
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
                                 Expose author name in posts
                                 <input type="checkbox" class="pull-right" checked>
                             </label>
-
                             <p>
                                 Allow the user to show his name in blog posts
                             </p>
                         </div>
                         <!-- /.form-group -->
-
                         <h3 class="control-sidebar-heading">Chat Settings</h3>
-
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
                                 Show me as online
@@ -333,7 +365,6 @@
                             </label>
                         </div>
                         <!-- /.form-group -->
-
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
                                 Turn off notifications
@@ -341,7 +372,6 @@
                             </label>
                         </div>
                         <!-- /.form-group -->
-
                         <div class="form-group">
                             <label class="control-sidebar-subheading">
                                 Delete chat history
@@ -372,4 +402,3 @@
     <script src="~/Scripts/dist/js/demo.js"></script>
 </body>
 </html>
-

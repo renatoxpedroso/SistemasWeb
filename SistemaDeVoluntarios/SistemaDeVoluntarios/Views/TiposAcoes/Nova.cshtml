@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tipos de Ações</title>
+    <title>Cadastro de Ações</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -26,37 +26,6 @@
     <![endif]-->
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <style>
-        .color-palette {
-            height: 35px;
-            line-height: 35px;
-            text-align: center;
-        }
-
-        .color-palette-set {
-            margin-bottom: 15px;
-        }
-
-        .color-palette span {
-            display: none;
-            font-size: 12px;
-        }
-
-        .color-palette:hover span {
-            display: block;
-        }
-
-        .color-palette-box h4 {
-            position: absolute;
-            top: 100%;
-            left: 25px;
-            margin-top: -40px;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 12px;
-            display: block;
-            z-index: 7;
-        }
-    </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -65,7 +34,7 @@
             <!-- Logo -->
             <a href="../../index.html" class="logo">
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>Voluntários</span>
+                <span class="logo-lg"><b>Voluntários</b></span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
@@ -78,6 +47,7 @@
                 </a>
             </nav>
         </header>
+
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
             <!-- sidebar: style can be found in sidebar.less -->
@@ -85,7 +55,7 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="~/Scripts/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p>Alexander Pierce</p>
@@ -97,7 +67,7 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">Administrador</li>
                     <li>
-                        <a href="Index/Index">
+                        <a href="/Index/Index">
                             <i class="fa fa-fw fa-home"></i> <span>Home</span>
                         </a>
                     </li>
@@ -135,8 +105,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <!--<li><a href="../../pages/UI/tipos_acoes.html"><i class="fa fa-circle-o"></i> Todas</a></li>-->
-                            <li><a href="/TiposAcoes/Nova"><i class="fa fa-circle-o"></i> Novos Tipo de Ações</a></li>
+                            <li><a href="/TiposAcoes/Index"><i class="fa fa-circle-o"></i> Todas</a></li>
+                            <!--<li><a href="../../pages/UI/cadastro_acoes.html"><i class="fa fa-circle-o"></i> Novas Ações</a></li>-->
                         </ul>
                     </li>
                 </ul>
@@ -149,98 +119,42 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Tipos de Ações
+                    Cadastro de Tipos de Ações
                 </h1>
             </section>
 
             <!-- Main content -->
             <section class="content">
-                <!-- /.row -->
-                <!-- Main row -->
                 <div class="row">
-                    <!-- Left col -->
-                    <section class="col-lg-15 connectedSortable">
-                        <!-- TO DO List -->
-                        <div class="box box-primary">
-                            <div class="box-header">
-                                <i class="ion ion-clipboard"></i>
-
-                                <h3 class="box-title">Lista de Ações</h3>
-
-                                <!--<div class="box-tools pull-right">
-                                    <ul class="pagination pagination-sm inline">
-                                        <li><a href="#">&laquo;</a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">&raquo;</a></li>
-                                    </ul>
-                                </div>-->
-                            </div>
+                    <!--/.col (left) -->
+                    <!-- right column -->
+                    <div class="col-md-15">
+                        <!-- Horizontal Form -->
+                        <div class="box box-info">
                             <!-- /.box-header -->
-                            <div class="box-body">
-                                <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
-                                <ul class="todo-list">
-                                    <li>
-                                        <!-- drag handle -->
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <!-- checkbox -->
-                                        <input type="checkbox" value="">
-                                        <!-- todo text -->
-                                        <span class="text">Cuidar de idosos</span>
-                                        <!-- Emphasis label -->
-                                        <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                                        <!-- General tools such as edit or delete-->
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="">
-                                        <span class="text">Doação de Alimentos</span>
-                                        <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="handle">
-                                            <i class="fa fa-ellipsis-v"></i>
-                                            <i class="fa fa-ellipsis-v"></i>
-                                        </span>
-                                        <input type="checkbox" value="">
-                                        <span class="text">Pintura Predial</span>
-                                        <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                                        <div class="tools">
-                                            <i class="fa fa-edit"></i>
-                                            <i class="fa fa-trash-o"></i>
-                                        </div>
-                                    </li>
+                            <!-- form start -->
+                            <form class="form-horizontal" method="post" action="/TiposAcoes/Gravar">
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="nome" class="col-sm-2 control-label">Nome do Tipo de Ação</label>
 
-                                </ul>
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="box-footer clearfix no-border">
-                                <a href="/CadastroAcoes/Index">
-                                    <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add nova ação</button>
-                                </a>
-                            </div>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome do Tipo de Ação">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-info pull-right">Salvar</button>
+                                </div>
+                                <!-- /.box-footer -->
+                            </form>
                         </div>
                         <!-- /.box -->
-                    </section>
-                    <!-- right col -->
+                    </div>
+                    <!--/.col (right) -->
                 </div>
-                <!-- /.row (main row) -->
-
+                <!-- /.row -->
             </section>
             <!-- /.content -->
         </div>
@@ -257,7 +171,6 @@
             <!-- Create the tabs -->
             <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
                 <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-
                 <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
             </ul>
             <!-- Tab panes -->

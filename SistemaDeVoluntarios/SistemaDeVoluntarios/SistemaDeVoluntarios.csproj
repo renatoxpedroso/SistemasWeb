@@ -13803,7 +13803,6 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Content\bootstrap-datetimepicker-build.less" />
-    <Content Include="Views\CadastroAcoes\Index.cshtml" />
     <Content Include="Views\TiposAcoes\Index.cshtml" />
     <Content Include="Views\CadastroUsuarios\Index.cshtml" />
     <Content Include="Views\IndexUsuario\Index.cshtml" />
@@ -13816,6 +13815,8 @@
     <Content Include="Views\AcoesUsuarios\IndexAcoesUsuariosAndamento.cshtml" />
     <Content Include="Views\AcoesUsuarios\IndexAcoesUsuariosConcluidas.cshtml" />
     <Content Include="Views\AcoesUsuarios\IndexAcoesUsuariosRecentes.cshtml" />
+    <Content Include="Views\TiposAcoes\Nova.cshtml" />
+    <Content Include="Views\CadastroAcoes\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
