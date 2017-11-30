@@ -37,18 +37,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     
     
-    <link href="~/Scripts/bower_components/jquery-ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
- 
+    <link href="@Url.Content("~/Content/themes/base/jquery.ui.core.css")"
+          rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery.ui.datepicker.css")"
+          rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery.ui.theme.css")"
+          rel="stylesheet" type="text/css" />
 
-    <!-- Javascript -->
-    <script>
-        $(function () {
-            $("#datepicker").datepicker();
-            $("#datepicker").datepicker("show");
-        });
-    </script>
+    <script src="@Url.Content("~/Scripts/jquery.ui.core.min.js")"
+            type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.ui.datepicker.min.js")"
+            type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/DatePickerReady.js")"
+            type="text/javascript"></script>
+
+
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -236,15 +239,15 @@
                                     <div class="form-group row">
                                         <label for="datinicio" class="col-lg-2 col-form-label">Data de Inicio</label>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-2">
                                             @{
                                                 if (acao != null)
                                                 {
-                                                    <input type="text" class="form-control pull-right form-group-lg" value="@acao.DatInicio" nome="datinicio" id="datepicker" placeholder="Data de Inicio">
+                                                    <input type="date" class="form-control pull-right form-group-lg" data-val-required="Inserir a data de inicio."  value="@acao.DatInicio" nome="datinicio" id="datinicio" placeholder="Data de Inicio">
                                                 }
                                                 else
                                                 {
-                                                    <input type="text" class="form-control pull-right form-group-lg" nome="datinicio" id="datepicker" placeholder="Data de Inicio">
+                                                    <input type="date" class="form-control pull-right form-group-lg" data-val-required="Inserir a data de inicio."  nome="datinicio" id="datinicio" placeholder="Data de Inicio">
                                                 }
                                             }
                                            
@@ -254,15 +257,15 @@
                                     <div class="form-group row">
                                         <label for="datfim" class="col-lg-2 col-form-label">Data de Fim</label>
 
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-2">
                                             @{
                                                 if (acao != null)
                                                 {
-                                                    <input type="text" class="form-control pull-right form-group-lg" value="@acao.DatFim" nome="datfim" id="datfim" placeholder="Data de Fim">
+                                                    <input type="date" class="form-control pull-right form-group-lg"  data-val="true" data-val-required="Inserir a data de fim." value="@acao.DatFim" nome="datfim" id="datfim" placeholder="Data de Fim">
                                                 }
                                                 else
                                                 {
-                                                    <input type="text" class="form-control pull-right form-group-lg"  nome="datfim" id="datfim" placeholder="Data de Fim">
+                                                    <input type="date" class="form-control pull-right form-group-lg"  data-val="true" data-val-required="Inserir a data de fim."  nome="datfim" id="datfim" placeholder="Data de Fim">
                                                 }
                                             }
                                            

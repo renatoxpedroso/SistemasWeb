@@ -138,10 +138,12 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                             comando.Parameters.AddWithValue("CodUsuario", id.ToString());
 
                             comando.ExecuteNonQuery();
+                            transacao.Commit();
                         }
                         catch (Exception x)
                         {
-
+                            transacao.Rollback();
+                            throw x;
                         }
                     }
                 }

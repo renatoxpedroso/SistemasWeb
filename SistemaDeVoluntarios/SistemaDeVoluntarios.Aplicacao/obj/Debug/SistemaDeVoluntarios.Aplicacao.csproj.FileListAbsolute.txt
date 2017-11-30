@@ -20,3 +20,15 @@ C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.csproj.CoreCompileInputs.cache
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.dll
 C:\Users\renat\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.pdb
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Aplicacao.dll
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Aplicacao.pdb
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Dominio.dll
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\SistemaDeVoluntarios.Dominio.pdb
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.dll
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.pdb
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\Npgsql.dll
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\Npgsql.xml
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Aplicacao\obj\Debug\SistemaDeVoluntarios.Aplicacao.csproj.CoreCompileInputs.cache
