@@ -1,0 +1,1055 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement">
+            <summary>Tipo de correção de Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.#ctor">
+            <summary>Inicializa uma nova instância de correção</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElement)">
+            <summary>Inicializa uma nova correção para a instância determinada</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances">
+            <summary>Definir shims para todos os membros de instâncias</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.ConnectionStringGet">
+            <summary>Define correção de DataSourceElement.get_ConnectionString()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.ConnectionStringSetString">
+            <summary>Define correção de DataSourceElement.set_ConnectionString(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.DataAccessMethodGet">
+            <summary>Define correção de DataSourceElement.get_DataAccessMethod()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.DataAccessMethodSetString">
+            <summary>Define correção de DataSourceElement.set_DataAccessMethod(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.DataTableNameGet">
+            <summary>Define correção de DataSourceElement.get_DataTableName()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.DataTableNameSetString">
+            <summary>Define correção de DataSourceElement.set_DataTableName(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.KeyGet">
+            <summary>Define correção de DataSourceElement.get_Key()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.NameGet">
+            <summary>Define correção de DataSourceElement.get_Name()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.NameSetString">
+            <summary>Define correção de DataSourceElement.set_Name(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.AllInstances.PropertiesGet">
+            <summary>Define correção de DataSourceElement.get_Properties()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.BehaveAsCurrent">
+            <summary>Atribui o comportamento &apos;Current&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.BehaveAsNotImplemented">
+            <summary>Atribui o comportamento &apos;NotImplemented&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.Behavior">
+            <summary>Atribui o comportamento para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.ConnectionStringGet">
+            <summary>Define correção de DataSourceElement.get_ConnectionString()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.ConnectionStringSetString">
+            <summary>Define correção de DataSourceElement.set_ConnectionString(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.Constructor">
+            <summary>Define correção de DataSourceElement.DataSourceElement()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.DataAccessMethodGet">
+            <summary>Define correção de DataSourceElement.get_DataAccessMethod()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.DataAccessMethodSetString">
+            <summary>Define correção de DataSourceElement.set_DataAccessMethod(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.DataTableNameGet">
+            <summary>Define correção de DataSourceElement.get_DataTableName()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.DataTableNameSetString">
+            <summary>Define correção de DataSourceElement.set_DataTableName(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.KeyGet">
+            <summary>Define correção de DataSourceElement.get_Key()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.NameGet">
+            <summary>Define correção de DataSourceElement.get_Name()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.NameSetString">
+            <summary>Define correção de DataSourceElement.set_Name(String value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.PropertiesGet">
+            <summary>Define correção de DataSourceElement.get_Properties()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElement.StaticConstructor">
+            <summary>Define correção de DataSourceElement.DataSourceElement()</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection">
+            <summary>Tipo de correção de Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.#ctor">
+            <summary>Inicializa uma nova instância de correção</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceElementCollection)">
+            <summary>Inicializa uma nova correção para a instância determinada</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AddDataSourceElement">
+            <summary>Define correção de DataSourceElementCollection.Add(DataSourceElement element)</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances">
+            <summary>Definir shims para todos os membros de instâncias</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.AddDataSourceElement">
+            <summary>Define correção de DataSourceElementCollection.Add(DataSourceElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.BaseAddConfigurationElement">
+            <summary>Define correção de DataSourceElementCollection.BaseAdd(ConfigurationElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.BaseAddInt32ConfigurationElement">
+            <summary>Define correção de DataSourceElementCollection.BaseAdd(Int32 index, ConfigurationElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.Clear">
+            <summary>Define correção de DataSourceElementCollection.Clear()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.CreateNewElement">
+            <summary>Define correção de DataSourceElementCollection.CreateNewElement()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.GetElementKeyConfigurationElement">
+            <summary>Define correção de DataSourceElementCollection.GetElementKey(ConfigurationElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.ItemGetInt32">
+            <summary>Define correção de DataSourceElementCollection.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.ItemGetString">
+            <summary>Define correção de DataSourceElementCollection.get_Item(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.ItemSetInt32DataSourceElement">
+            <summary>Define correção de DataSourceElementCollection.set_Item(Int32 index, DataSourceElement value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.RemoveDataSourceElement">
+            <summary>Define correção de DataSourceElementCollection.Remove(DataSourceElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.AllInstances.RemoveString">
+            <summary>Define correção de DataSourceElementCollection.Remove(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.BaseAddConfigurationElement">
+            <summary>Define correção de DataSourceElementCollection.BaseAdd(ConfigurationElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.BaseAddInt32ConfigurationElement">
+            <summary>Define correção de DataSourceElementCollection.BaseAdd(Int32 index, ConfigurationElement element)</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.BehaveAsCurrent">
+            <summary>Atribui o comportamento &apos;Current&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.BehaveAsNotImplemented">
+            <summary>Atribui o comportamento &apos;NotImplemented&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.Behavior">
+            <summary>Atribui o comportamento para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.Bind(System.Collections.ICollection)">
+            <summary>Vincula os membros da interface à correção.</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.Bind(System.Collections.IEnumerable)">
+            <summary>Vincula os membros da interface à correção.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.Clear">
+            <summary>Define correção de DataSourceElementCollection.Clear()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.Constructor">
+            <summary>Define correção de DataSourceElementCollection.DataSourceElementCollection()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.CreateNewElement">
+            <summary>Define correção de DataSourceElementCollection.CreateNewElement()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.GetElementKeyConfigurationElement">
+            <summary>Define correção de DataSourceElementCollection.GetElementKey(ConfigurationElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.ItemGetInt32">
+            <summary>Define correção de DataSourceElementCollection.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.ItemGetString">
+            <summary>Define correção de DataSourceElementCollection.get_Item(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.ItemSetInt32DataSourceElement">
+            <summary>Define correção de DataSourceElementCollection.set_Item(Int32 index, DataSourceElement value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.RemoveDataSourceElement">
+            <summary>Define correção de DataSourceElementCollection.Remove(DataSourceElement element)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimDataSourceElementCollection.RemoveString">
+            <summary>Define correção de DataSourceElementCollection.Remove(String name)</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject">
+            <summary>Tipo de correção de Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.#ctor">
+            <summary>Inicializa uma nova instância de correção</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject)">
+            <summary>Inicializa uma nova correção para a instância determinada</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances">
+            <summary>Definir shims para todos os membros de instâncias</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.BuildGenericMethodCacheForTypeType">
+            <summary>Define correção de PrivateObject.BuildGenericMethodCacheForType(Type t)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.ConstructFromObject">
+            <summary>Define correção de PrivateObject.ConstructFrom(Object obj)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.EqualsObject">
+            <summary>Define correção de PrivateObject.Equals(Object obj)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GenericMethodCacheGet">
+            <summary>Define correção de PrivateObject.get_GenericMethodCache()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetArrayElementStringBindingFlagsInt32Array">
+            <summary>Define correção de PrivateObject.GetArrayElement(String name, BindingFlags bindingFlags, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetArrayElementStringInt32Array">
+            <summary>Define correção de PrivateObject.GetArrayElement(String name, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetFieldOrPropertyString">
+            <summary>Define correção de PrivateObject.GetFieldOrProperty(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetFieldOrPropertyStringBindingFlags">
+            <summary>Define correção de PrivateObject.GetFieldOrProperty(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetFieldString">
+            <summary>Define correção de PrivateObject.GetField(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetFieldStringBindingFlags">
+            <summary>Define correção de PrivateObject.GetField(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetGenericMethodFromCacheStringTypeArrayTypeArrayBindingFlagsParameterModifierArray">
+            <summary>Define correção de PrivateObject.GetGenericMethodFromCache(String methodName, Type[] parameterTypes, Type[] typeArguments, BindingFlags bindingFlags, ParameterModifier[] modifiers)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetHashCode01">
+            <summary>Define correção de PrivateObject.GetHashCode()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetMethodCandidatesStringTypeArrayTypeArrayBindingFlagsParameterModifierArray">
+            <summary>Define correção de PrivateObject.GetMethodCandidates(String methodName, Type[] parameterTypes, Type[] typeArguments, BindingFlags bindingFlags, ParameterModifier[] modifiers)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetPropertyStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetPropertyStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetPropertyStringObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.GetPropertyStringTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeHelperStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.InvokeHelper(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringBindingFlagsTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringBindingFlagsTypeArrayObjectArrayCultureInfoTypeArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.InvokeStringTypeArrayObjectArrayTypeArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, Type[] parameterTypes, Object[] args, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.RealTypeGet">
+            <summary>Define correção de PrivateObject.get_RealType()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetArrayElementStringBindingFlagsObjectInt32Array">
+            <summary>Define correção de PrivateObject.SetArrayElement(String name, BindingFlags bindingFlags, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetArrayElementStringObjectInt32Array">
+            <summary>Define correção de PrivateObject.SetArrayElement(String name, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetFieldOrPropertyStringBindingFlagsObject">
+            <summary>Define correção de PrivateObject.SetFieldOrProperty(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetFieldOrPropertyStringObject">
+            <summary>Define correção de PrivateObject.SetFieldOrProperty(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetFieldStringBindingFlagsObject">
+            <summary>Define correção de PrivateObject.SetField(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetFieldStringObject">
+            <summary>Define correção de PrivateObject.SetField(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetPropertyStringBindingFlagsObjectObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, BindingFlags bindingFlags, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetPropertyStringBindingFlagsObjectTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, BindingFlags bindingFlags, Object value, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetPropertyStringObjectObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.SetPropertyStringTypeArrayObjectObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, Type[] parameterTypes, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.TargetGet">
+            <summary>Define correção de PrivateObject.get_Target()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.AllInstances.TargetSetObject">
+            <summary>Define correção de PrivateObject.set_Target(Object value)</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.BehaveAsCurrent">
+            <summary>Atribui o comportamento &apos;Current&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.BehaveAsNotImplemented">
+            <summary>Atribui o comportamento &apos;NotImplemented&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.Behavior">
+            <summary>Atribui o comportamento para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.BuildGenericMethodCacheForTypeType">
+            <summary>Define correção de PrivateObject.BuildGenericMethodCacheForType(Type t)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructFromObject">
+            <summary>Define correção de PrivateObject.ConstructFrom(Object obj)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructorObject">
+            <summary>Define correção de PrivateObject.PrivateObject(Object obj)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructorObjectPrivateType">
+            <summary>Define correção de PrivateObject.PrivateObject(Object obj, PrivateType type)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructorObjectString">
+            <summary>Define correção de PrivateObject.PrivateObject(Object obj, String memberToAccess)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructorStringStringObjectArray">
+            <summary>Define correção de PrivateObject.PrivateObject(String assemblyName, String typeName, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructorStringStringTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.PrivateObject(String assemblyName, String typeName, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructorTypeObjectArray">
+            <summary>Define correção de PrivateObject.PrivateObject(Type type, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ConstructorTypeTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.PrivateObject(Type type, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.EqualsObject">
+            <summary>Define correção de PrivateObject.Equals(Object obj)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GenericMethodCacheGet">
+            <summary>Define correção de PrivateObject.get_GenericMethodCache()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetArrayElementStringBindingFlagsInt32Array">
+            <summary>Define correção de PrivateObject.GetArrayElement(String name, BindingFlags bindingFlags, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetArrayElementStringInt32Array">
+            <summary>Define correção de PrivateObject.GetArrayElement(String name, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetFieldOrPropertyString">
+            <summary>Define correção de PrivateObject.GetFieldOrProperty(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetFieldOrPropertyStringBindingFlags">
+            <summary>Define correção de PrivateObject.GetFieldOrProperty(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetFieldString">
+            <summary>Define correção de PrivateObject.GetField(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetFieldStringBindingFlags">
+            <summary>Define correção de PrivateObject.GetField(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetGenericMethodFromCacheStringTypeArrayTypeArrayBindingFlagsParameterModifierArray">
+            <summary>Define correção de PrivateObject.GetGenericMethodFromCache(String methodName, Type[] parameterTypes, Type[] typeArguments, BindingFlags bindingFlags, ParameterModifier[] modifiers)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetHashCode">
+            <summary>Define correção de PrivateObject.GetHashCode()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetMethodCandidatesStringTypeArrayTypeArrayBindingFlagsParameterModifierArray">
+            <summary>Define correção de PrivateObject.GetMethodCandidates(String methodName, Type[] parameterTypes, Type[] typeArguments, BindingFlags bindingFlags, ParameterModifier[] modifiers)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetPropertyStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetPropertyStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetPropertyStringObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.GetPropertyStringTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.GetProperty(String name, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeHelperStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.InvokeHelper(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringBindingFlagsTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringBindingFlagsTypeArrayObjectArrayCultureInfoTypeArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateObject.Invoke(String name, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.InvokeStringTypeArrayObjectArrayTypeArray">
+            <summary>Define correção de PrivateObject.Invoke(String name, Type[] parameterTypes, Object[] args, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.RealTypeGet">
+            <summary>Define correção de PrivateObject.get_RealType()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetArrayElementStringBindingFlagsObjectInt32Array">
+            <summary>Define correção de PrivateObject.SetArrayElement(String name, BindingFlags bindingFlags, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetArrayElementStringObjectInt32Array">
+            <summary>Define correção de PrivateObject.SetArrayElement(String name, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetFieldOrPropertyStringBindingFlagsObject">
+            <summary>Define correção de PrivateObject.SetFieldOrProperty(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetFieldOrPropertyStringObject">
+            <summary>Define correção de PrivateObject.SetFieldOrProperty(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetFieldStringBindingFlagsObject">
+            <summary>Define correção de PrivateObject.SetField(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetFieldStringObject">
+            <summary>Define correção de PrivateObject.SetField(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetPropertyStringBindingFlagsObjectObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, BindingFlags bindingFlags, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetPropertyStringBindingFlagsObjectTypeArrayObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, BindingFlags bindingFlags, Object value, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetPropertyStringObjectObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.SetPropertyStringTypeArrayObjectObjectArray">
+            <summary>Define correção de PrivateObject.SetProperty(String name, Type[] parameterTypes, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.StaticConstructor">
+            <summary>Define correção de PrivateObject.PrivateObject()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.TargetGet">
+            <summary>Define correção de PrivateObject.get_Target()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.TargetSetObject">
+            <summary>Define correção de PrivateObject.set_Target(Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateObject.ValidateAccessStringString">
+            <summary>Define correção de PrivateObject.ValidateAccessString(String access)</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType">
+            <summary>Tipo de correção de Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.#ctor">
+            <summary>Inicializa uma nova instância de correção</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType)">
+            <summary>Inicializa uma nova correção para a instância determinada</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances">
+            <summary>Definir shims para todos os membros de instâncias</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticArrayElementStringBindingFlagsInt32Array">
+            <summary>Define correção de PrivateType.GetStaticArrayElement(String name, BindingFlags bindingFlags, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticArrayElementStringInt32Array">
+            <summary>Define correção de PrivateType.GetStaticArrayElement(String name, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticFieldOrPropertyString">
+            <summary>Define correção de PrivateType.GetStaticFieldOrProperty(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticFieldOrPropertyStringBindingFlags">
+            <summary>Define correção de PrivateType.GetStaticFieldOrProperty(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticFieldString">
+            <summary>Define correção de PrivateType.GetStaticField(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticFieldStringBindingFlags">
+            <summary>Define correção de PrivateType.GetStaticField(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticPropertyStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateType.GetStaticProperty(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticPropertyStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.GetStaticProperty(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.GetStaticPropertyStringObjectArray">
+            <summary>Define correção de PrivateType.GetStaticProperty(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeHelperStaticStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeHelperStatic(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringBindingFlagsTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringBindingFlagsTypeArrayObjectArrayCultureInfoTypeArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.InvokeStaticStringTypeArrayObjectArrayTypeArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Type[] parameterTypes, Object[] args, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.ReferencedTypeGet">
+            <summary>Define correção de PrivateType.get_ReferencedType()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticArrayElementStringBindingFlagsObjectInt32Array">
+            <summary>Define correção de PrivateType.SetStaticArrayElement(String name, BindingFlags bindingFlags, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticArrayElementStringObjectInt32Array">
+            <summary>Define correção de PrivateType.SetStaticArrayElement(String name, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticFieldOrPropertyStringBindingFlagsObject">
+            <summary>Define correção de PrivateType.SetStaticFieldOrProperty(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticFieldOrPropertyStringObject">
+            <summary>Define correção de PrivateType.SetStaticFieldOrProperty(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticFieldStringBindingFlagsObject">
+            <summary>Define correção de PrivateType.SetStaticField(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticFieldStringObject">
+            <summary>Define correção de PrivateType.SetStaticField(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticPropertyStringBindingFlagsObjectObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, BindingFlags bindingFlags, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticPropertyStringBindingFlagsObjectTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, BindingFlags bindingFlags, Object value, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticPropertyStringObjectObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.AllInstances.SetStaticPropertyStringObjectTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, Object value, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.BehaveAsCurrent">
+            <summary>Atribui o comportamento &apos;Current&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.BehaveAsNotImplemented">
+            <summary>Atribui o comportamento &apos;NotImplemented&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.Behavior">
+            <summary>Atribui o comportamento para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.ConstructorStringString">
+            <summary>Define correção de PrivateType.PrivateType(String assemblyName, String typeName)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.ConstructorType">
+            <summary>Define correção de PrivateType.PrivateType(Type type)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticArrayElementStringBindingFlagsInt32Array">
+            <summary>Define correção de PrivateType.GetStaticArrayElement(String name, BindingFlags bindingFlags, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticArrayElementStringInt32Array">
+            <summary>Define correção de PrivateType.GetStaticArrayElement(String name, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticFieldOrPropertyString">
+            <summary>Define correção de PrivateType.GetStaticFieldOrProperty(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticFieldOrPropertyStringBindingFlags">
+            <summary>Define correção de PrivateType.GetStaticFieldOrProperty(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticFieldString">
+            <summary>Define correção de PrivateType.GetStaticField(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticFieldStringBindingFlags">
+            <summary>Define correção de PrivateType.GetStaticField(String name, BindingFlags bindingFlags)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticPropertyStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateType.GetStaticProperty(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticPropertyStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.GetStaticProperty(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.GetStaticPropertyStringObjectArray">
+            <summary>Define correção de PrivateType.GetStaticProperty(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeHelperStaticStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeHelperStatic(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringBindingFlagsObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringBindingFlagsObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringBindingFlagsTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringBindingFlagsTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringBindingFlagsTypeArrayObjectArrayCultureInfoTypeArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, BindingFlags bindingFlags, Type[] parameterTypes, Object[] args, CultureInfo culture, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringTypeArrayObjectArrayCultureInfo">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Type[] parameterTypes, Object[] args, CultureInfo culture)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.InvokeStaticStringTypeArrayObjectArrayTypeArray">
+            <summary>Define correção de PrivateType.InvokeStatic(String name, Type[] parameterTypes, Object[] args, Type[] typeArguments)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.ReferencedTypeGet">
+            <summary>Define correção de PrivateType.get_ReferencedType()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticArrayElementStringBindingFlagsObjectInt32Array">
+            <summary>Define correção de PrivateType.SetStaticArrayElement(String name, BindingFlags bindingFlags, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticArrayElementStringObjectInt32Array">
+            <summary>Define correção de PrivateType.SetStaticArrayElement(String name, Object value, Int32[] indices)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticFieldOrPropertyStringBindingFlagsObject">
+            <summary>Define correção de PrivateType.SetStaticFieldOrProperty(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticFieldOrPropertyStringObject">
+            <summary>Define correção de PrivateType.SetStaticFieldOrProperty(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticFieldStringBindingFlagsObject">
+            <summary>Define correção de PrivateType.SetStaticField(String name, BindingFlags bindingFlags, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticFieldStringObject">
+            <summary>Define correção de PrivateType.SetStaticField(String name, Object value)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticPropertyStringBindingFlagsObjectObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, BindingFlags bindingFlags, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticPropertyStringBindingFlagsObjectTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, BindingFlags bindingFlags, Object value, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticPropertyStringObjectObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, Object value, Object[] args)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimPrivateType.SetStaticPropertyStringObjectTypeArrayObjectArray">
+            <summary>Define correção de PrivateType.SetStaticProperty(String name, Object value, Type[] parameterTypes, Object[] args)</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration">
+            <summary>Tipo de correção de Microsoft.VisualStudio.TestTools.UnitTesting.TestConfiguration</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration.#ctor">
+            <summary>Inicializa uma nova instância de correção</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration.BehaveAsCurrent">
+            <summary>Atribui o comportamento &apos;Current&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration.BehaveAsNotImplemented">
+            <summary>Atribui o comportamento &apos;NotImplemented&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration.Behavior">
+            <summary>Atribui o comportamento para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration.ConfigurationSectionGet">
+            <summary>Define correção de TestConfiguration.get_ConfigurationSection()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration.LoadConfiguration">
+            <summary>Define correção de TestConfiguration.LoadConfiguration()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfiguration.StaticConstructor">
+            <summary>Define correção de TestConfiguration.TestConfiguration()</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection">
+            <summary>Tipo de correção de Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.#ctor">
+            <summary>Inicializa uma nova instância de correção</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection)">
+            <summary>Inicializa uma nova correção para a instância determinada</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.AllInstances">
+            <summary>Definir shims para todos os membros de instâncias</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.AllInstances.DataSourcesGet">
+            <summary>Define correção de TestConfigurationSection.get_DataSources()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.AllInstances.PropertiesGet">
+            <summary>Define correção de TestConfigurationSection.get_Properties()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.BehaveAsCurrent">
+            <summary>Atribui o comportamento &apos;Current&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.BehaveAsNotImplemented">
+            <summary>Atribui o comportamento &apos;NotImplemented&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.Behavior">
+            <summary>Atribui o comportamento para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.Constructor">
+            <summary>Define correção de TestConfigurationSection.TestConfigurationSection()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.DataSourcesGet">
+            <summary>Define correção de TestConfigurationSection.get_DataSources()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.PropertiesGet">
+            <summary>Define correção de TestConfigurationSection.get_Properties()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestConfigurationSection.StaticConstructor">
+            <summary>Define correção de TestConfigurationSection.TestConfigurationSection()</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext">
+            <summary>Tipo de correção de Microsoft.VisualStudio.TestTools.UnitTesting.TestContext</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)">
+            <summary>Inicializa uma nova correção para a instância determinada</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances">
+            <summary>Definir shims para todos os membros de instâncias</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.CurrentTestOutcomeGet">
+            <summary>Define correção de TestContext.get_CurrentTestOutcome()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.DeploymentDirectoryGet">
+            <summary>Define correção de TestContext.get_DeploymentDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.FullyQualifiedTestClassNameGet">
+            <summary>Define correção de TestContext.get_FullyQualifiedTestClassName()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.GetPropertyOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Microsoft.VisualStudio.TestTools.UnitTesting.TestContext,System.String,``0})">
+            <summary>Define correção de TestContext.GetProperty(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.ResultsDirectoryGet">
+            <summary>Define correção de TestContext.get_ResultsDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.TestDeploymentDirGet">
+            <summary>Define correção de TestContext.get_TestDeploymentDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.TestDirGet">
+            <summary>Define correção de TestContext.get_TestDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.TestLogsDirGet">
+            <summary>Define correção de TestContext.get_TestLogsDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.TestNameGet">
+            <summary>Define correção de TestContext.get_TestName()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.TestResultsDirectoryGet">
+            <summary>Define correção de TestContext.get_TestResultsDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.TestRunDirectoryGet">
+            <summary>Define correção de TestContext.get_TestRunDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.AllInstances.TestRunResultsDirectoryGet">
+            <summary>Define correção de TestContext.get_TestRunResultsDirectory()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.BehaveAsCurrent">
+            <summary>Atribui o comportamento &apos;Current&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.BehaveAsNotImplemented">
+            <summary>Atribui o comportamento &apos;NotImplemented&apos; para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.Behavior">
+            <summary>Atribui o comportamento para todos os métodos do tipo corrigido</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.Constructor">
+            <summary>Define correção de TestContext.TestContext()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.CurrentTestOutcomeGet">
+            <summary>Define correção de TestContext.get_CurrentTestOutcome()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.DeploymentDirectoryGet">
+            <summary>Define correção de TestContext.get_DeploymentDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.FullyQualifiedTestClassNameGet">
+            <summary>Define correção de TestContext.get_FullyQualifiedTestClassName()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.GetPropertyOf1String``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String,``0})">
+            <summary>Define correção de TestContext.GetProperty(String name)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.ResultsDirectoryGet">
+            <summary>Define correção de TestContext.get_ResultsDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.TestDeploymentDirGet">
+            <summary>Define correção de TestContext.get_TestDeploymentDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.TestDirGet">
+            <summary>Define correção de TestContext.get_TestDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.TestLogsDirGet">
+            <summary>Define correção de TestContext.get_TestLogsDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.TestNameGet">
+            <summary>Define correção de TestContext.get_TestName()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.TestResultsDirectoryGet">
+            <summary>Define correção de TestContext.get_TestResultsDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.TestRunDirectoryGet">
+            <summary>Define correção de TestContext.get_TestRunDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.ShimTestContext.TestRunResultsDirectoryGet">
+            <summary>Define correção de TestContext.get_TestRunResultsDirectory()</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject">
+            <summary>Tipo stub de Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.#ctor(System.Object)">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.#ctor(System.Object,Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType)">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.#ctor(System.Object,System.String)">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.#ctor(System.Type,System.Object[])">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.#ctor(System.String,System.String,System.Object[])">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.#ctor(System.Type,System.Type[],System.Object[])">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.#ctor(System.String,System.String,System.Type[],System.Object[])">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.CallBase">
+            <summary>Obtém ou define um valor que indica se o método base deve ser chamado em vez do comportamento de fallback</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.Equals(System.Object)">
+            <summary>Define stub de PrivateObject.Equals(Object obj)</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.EqualsObject">
+            <summary>Define stub de PrivateObject.Equals(Object obj)</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.GetHashCode">
+            <summary>Define stub de PrivateObject.GetHashCode()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.GetHashCode01">
+            <summary>Define stub de PrivateObject.GetHashCode()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.InitializeStub">
+            <summary>Inicializa uma nova instância do type StubPrivateObject</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.InstanceBehavior">
+            <summary>Obtém ou define o comportamento da instância.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateObject.InstanceObserver">
+            <summary>Obtém ou define o observador de instância.</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateType">
+            <summary>Tipo stub de Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateType.#ctor(System.Type)">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateType.#ctor(System.String,System.String)">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateType.CallBase">
+            <summary>Obtém ou define um valor que indica se o método base deve ser chamado em vez do comportamento de fallback</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateType.InitializeStub">
+            <summary>Inicializa uma nova instância do type StubPrivateType</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateType.InstanceBehavior">
+            <summary>Obtém ou define o comportamento da instância.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubPrivateType.InstanceObserver">
+            <summary>Obtém ou define o observador de instância.</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext">
+            <summary>Tipo stub de Microsoft.VisualStudio.TestTools.UnitTesting.TestContext</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.#ctor">
+            <summary>Inicializa uma nova instância</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.AddResultFile(System.String)">
+            <summary>Define stub de TestContext.AddResultFile(String fileName)</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.AddResultFileString">
+            <summary>Define stub de TestContext.AddResultFile(String fileName)</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.BeginTimer(System.String)">
+            <summary>Define stub de TestContext.BeginTimer(String timerName)</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.BeginTimerString">
+            <summary>Define stub de TestContext.BeginTimer(String timerName)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.CallBase">
+            <summary>Obtém ou define um valor que indica se o método base deve ser chamado em vez do comportamento de fallback</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.CurrentTestOutcome">
+            <summary>Define stub de TestContext.get_CurrentTestOutcome()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.CurrentTestOutcomeGet">
+            <summary>Define stub de TestContext.get_CurrentTestOutcome()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.DataConnection">
+            <summary>Define stub de TestContext.get_DataConnection()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.DataConnectionGet">
+            <summary>Define stub de TestContext.get_DataConnection()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.DataRow">
+            <summary>Define stub de TestContext.get_DataRow()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.DataRowGet">
+            <summary>Define stub de TestContext.get_DataRow()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.DeploymentDirectory">
+            <summary>Define stub de TestContext.get_DeploymentDirectory()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.DeploymentDirectoryGet">
+            <summary>Define stub de TestContext.get_DeploymentDirectory()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.EndTimer(System.String)">
+            <summary>Define stub de TestContext.EndTimer(String timerName)</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.EndTimerString">
+            <summary>Define stub de TestContext.EndTimer(String timerName)</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.FullyQualifiedTestClassName">
+            <summary>Define stub de TestContext.get_FullyQualifiedTestClassName()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.FullyQualifiedTestClassNameGet">
+            <summary>Define stub de TestContext.get_FullyQualifiedTestClassName()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.InitializeStub">
+            <summary>Inicializa uma nova instância do type StubTestContext</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.InstanceBehavior">
+            <summary>Obtém ou define o comportamento da instância.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.InstanceObserver">
+            <summary>Obtém ou define o observador de instância.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.Properties">
+            <summary>Define stub de TestContext.get_Properties()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.PropertiesGet">
+            <summary>Define stub de TestContext.get_Properties()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.ResultsDirectory">
+            <summary>Define stub de TestContext.get_ResultsDirectory()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.ResultsDirectoryGet">
+            <summary>Define stub de TestContext.get_ResultsDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestDeploymentDir">
+            <summary>Define stub de TestContext.get_TestDeploymentDir()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestDeploymentDirGet">
+            <summary>Define stub de TestContext.get_TestDeploymentDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestDir">
+            <summary>Define stub de TestContext.get_TestDir()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestDirGet">
+            <summary>Define stub de TestContext.get_TestDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestLogsDir">
+            <summary>Define stub de TestContext.get_TestLogsDir()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestLogsDirGet">
+            <summary>Define stub de TestContext.get_TestLogsDir()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestName">
+            <summary>Define stub de TestContext.get_TestName()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestNameGet">
+            <summary>Define stub de TestContext.get_TestName()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestResultsDirectory">
+            <summary>Define stub de TestContext.get_TestResultsDirectory()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestResultsDirectoryGet">
+            <summary>Define stub de TestContext.get_TestResultsDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestRunDirectory">
+            <summary>Define stub de TestContext.get_TestRunDirectory()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestRunDirectoryGet">
+            <summary>Define stub de TestContext.get_TestRunDirectory()</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestRunResultsDirectory">
+            <summary>Define stub de TestContext.get_TestRunResultsDirectory()</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.TestRunResultsDirectoryGet">
+            <summary>Define stub de TestContext.get_TestRunResultsDirectory()</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.WriteLine(System.String)">
+            <summary>Define stub de TestContext.WriteLine(String message)</summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.WriteLine(System.String,System.Object[])">
+            <summary>Define stub de TestContext.WriteLine(String format, Object[] args)</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.WriteLineString">
+            <summary>Define stub de TestContext.WriteLine(String message)</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.UnitTesting.Fakes.StubTestContext.WriteLineStringObjectArray">
+            <summary>Define stub de TestContext.WriteLine(String format, Object[] args)</summary>
+        </member>
+    </members>
+</doc>

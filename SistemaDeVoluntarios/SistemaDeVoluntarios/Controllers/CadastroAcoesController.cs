@@ -16,9 +16,29 @@ namespace SistemaDeVoluntarios.Controllers
     [Filtro.FiltroAcess]
     public class CadastroAcoesController : Controller
     {
+        
+
         // GET: CadastroAcoes
         public ActionResult Index()
         {
+            List<Models.TipoAcoes> tipoAcaoModel;
+            TipoAcoesRepositorio  tipoAcaoRepositorio = new TipoAcoesRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
+            TipoAcoesAplicacao tipoAcaoAplicacao = new TipoAcoesAplicacao(tipoAcaoRepositorio);
+            List<Dominio.Entidades.TipoAcoes> tipoAcoes = tipoAcaoAplicacao.ProcurarTodas();
+
+            tipoAcaoModel = Adapter.TipoAcoesAdapter.ParaModel(tipoAcoes);
+
+            if (Session["acao"] != null)
+            {
+                ViewBag.acao = Session["acao"];
+            }
+            else
+            {
+                ViewBag.acao = null;
+            }
+
+            ViewBag.tipoAcoes = tipoAcaoModel;
+
             return View();
         }
 
@@ -45,13 +65,28 @@ namespace SistemaDeVoluntarios.Controllers
             {
                 Status = acoes.Status,
                 Assunto = acoes.Assunto,
-                DatInicio = acoes.DatInicio,
-                DatFim = acoes.DatFim,
+                DatInicio = Convert.ToDateTime(acoes.DatInicio),
+                DatFim = Convert.ToDateTime(acoes.DatFim),
                 TipoAcao = acoes.TipoAcao
 
             };
 
             acaoAplicacao.Inserir(acao);
+
+            return RedirectToAction("index");
+        }
+
+        public ActionResult Editar(int Id)
+        {
+            Models.Acoes acoesModel;
+            AcoesRepositorio acaoRepositorio = new AcoesRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
+            AcoesAplicacao acaoAplicacao = new AcoesAplicacao(acaoRepositorio);
+            Dominio.Entidades.Acoes acoes = acaoAplicacao.Procurar(Id);
+
+            acoesModel = Adapter.AcoesAdapter.ParaModel(acoes);
+
+            Session["acao"] = acoesModel;
+
 
             return RedirectToAction("index");
         }

@@ -150,34 +150,41 @@
                                         <th>ID</th>
                                         <th>Nome</th>
                                         <th>E-mail</th>
-                                        <th>Tipo</th>
-                                        <th>Instituição</th>
+                                        <th>Tipo Usuário</th>
+                                        <th>Tipo Pessoa</th>
                                         <th>Status</th>
                                     </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Juliano</td>
-                                        <td>juliano@juliano.com.br</td>
-                                        <td>Voluntário</td>
-                                        <td>Empresa</td>
-                                        <td><span class="label label-success">Aprovado</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Alexandre</td>
-                                        <td>alexandre@alexandre.com.br</td>
-                                        <td>Entidade</td>
-                                        <td>Empresa</td>
-                                        <td><span class="label label-warning">Pendente</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Paulo</td>
-                                        <td>paulo@paulo.com.br</td>
-                                        <td>Voluntário</td>
-                                        <td>Empresa</td>
-                                        <td><span class="label label-danger">Bloqueado</span></td>                                       
-                                    </tr>
+
+                                    @foreach (var usu in ViewBag.usuarios)
+                                    {
+                                        <tr>
+                                            <td>@usu.CodUsuario</td>
+                                            <td>@usu.Nome</td>
+                                            <td>@usu.Email</td>
+                                            @if (usu.TipoUsuario == 1)
+                                            {
+                                                <td>Voluntario</td>
+                                            }
+                                            else if (usu.TipoUsuario == 2)
+                                            {
+                                                <td>Entidade</td>
+                                            }
+                                            else
+                                            {
+                                                <td>Administrador</td>
+                                            }
+
+                                            @if (usu.TipoPessoa == 1)
+                                            {
+                                                <td>Fisica</td>
+                                            }
+                                            else
+                                            {
+                                                <td>Juridica</td>
+                                            }
+                                            <td><span class="label label-success">Aprovado</span></td>
+                                        </tr>
+                                    }
                                 </table>
                             </div>
                             <!-- /.box-body -->

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeVoluntarios", "SistemaDeVoluntarios\SistemaDeVoluntarios.csproj", "{AD0F5264-91D2-49C9-9CA8-35DCF664DACA}"
 EndProject
@@ -146,5 +146,8 @@ Global
 		{594D997A-FF0B-41BF-B230-30BEDF9505E5} = {88C2A4E2-1DFE-4147-8402-837ECE84D5B8}
 		{6E97D0E1-B903-4EB2-B658-470850801A2B} = {99D97722-2879-49DD-A9DB-865F2426C2FB}
 		{221EF003-F4F7-4E3C-853A-5F323CFC283A} = {88C2A4E2-1DFE-4147-8402-837ECE84D5B8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F76F2DC-C1B3-4BE4-8A2E-98D4C4A14B3D}
 	EndGlobalSection
 EndGlobal

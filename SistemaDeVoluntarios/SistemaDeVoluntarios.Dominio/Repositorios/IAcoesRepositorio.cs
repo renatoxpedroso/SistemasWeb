@@ -13,7 +13,8 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
         void Inserir(Acoes acoes);
         void Alterar(Acoes acoes, Guid id);
         void Excluir(Guid id);
-        Acoes Procurar(Guid id);
+        Acoes Procurar(int id);
+        List<Acoes> ProcurarTodas();
 
     }
 }

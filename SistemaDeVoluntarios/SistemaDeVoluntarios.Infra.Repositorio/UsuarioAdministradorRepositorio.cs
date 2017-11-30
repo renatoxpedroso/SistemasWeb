@@ -23,98 +23,132 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
 
         public void Inserir(UsuarioAdministrador usuariosAdministrador)
         {
-            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            try
             {
-                try
+                using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
                 {
                     con.Open();
-                    NpgsqlCommand comando = new NpgsqlCommand();
-                    comando.Connection = con;
-                    comando.CommandText = "INSERT INTO Usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado) " +
-                        "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado);";
+                    using (NpgsqlTransaction transacao = con.BeginTransaction())
+                    {
+                        try
+                        {
+                            NpgsqlCommand comando = new NpgsqlCommand();
+                            comando.Connection = con;
+                            comando.CommandText = "INSERT INTO Usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado) " +
+                                "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado);";
 
-                    comando.Parameters.AddWithValue("CodUsuario", Guid.NewGuid());
-                    comando.Parameters.AddWithValue("TipoUsuario", 3);
-                    comando.Parameters.AddWithValue("TipoPessoa", usuariosAdministrador.TipoPessoa);
-                    comando.Parameters.AddWithValue("Nome", usuariosAdministrador.Nome);
-                    comando.Parameters.AddWithValue("Email", usuariosAdministrador.Email);
-                    comando.Parameters.AddWithValue("Senha", usuariosAdministrador.Senha);
-                    comando.Parameters.AddWithValue("DataNacimento", usuariosAdministrador.DataNacimento);
-                    comando.Parameters.AddWithValue("cpfCnpj", usuariosAdministrador.cpfCnpj);
-                    comando.Parameters.AddWithValue("Telefone", usuariosAdministrador.Telefone);
-                    comando.Parameters.AddWithValue("Celular", usuariosAdministrador.Celular);
-                    comando.Parameters.AddWithValue("Rua", usuariosAdministrador.Rua);
-                    comando.Parameters.AddWithValue("Numero", usuariosAdministrador.Numero);
-                    comando.Parameters.AddWithValue("Bairro", usuariosAdministrador.Bairro);
-                    comando.Parameters.AddWithValue("Cidade", usuariosAdministrador.Cidade);
-                    comando.Parameters.AddWithValue("Cep", usuariosAdministrador.Cep);
-                    comando.Parameters.AddWithValue("Estado", usuariosAdministrador.Estado);
+                            comando.Parameters.AddWithValue("CodUsuario", Guid.NewGuid());
+                            comando.Parameters.AddWithValue("TipoUsuario", 3);
+                            comando.Parameters.AddWithValue("TipoPessoa", usuariosAdministrador.TipoPessoa);
+                            comando.Parameters.AddWithValue("Nome", usuariosAdministrador.Nome);
+                            comando.Parameters.AddWithValue("Email", usuariosAdministrador.Email);
+                            comando.Parameters.AddWithValue("Senha", usuariosAdministrador.Senha);
+                            comando.Parameters.AddWithValue("DataNacimento", usuariosAdministrador.DataNacimento);
+                            comando.Parameters.AddWithValue("cpfCnpj", usuariosAdministrador.cpfCnpj);
+                            comando.Parameters.AddWithValue("Telefone", usuariosAdministrador.Telefone);
+                            comando.Parameters.AddWithValue("Celular", usuariosAdministrador.Celular);
+                            comando.Parameters.AddWithValue("Rua", usuariosAdministrador.Rua);
+                            comando.Parameters.AddWithValue("Numero", usuariosAdministrador.Numero);
+                            comando.Parameters.AddWithValue("Bairro", usuariosAdministrador.Bairro);
+                            comando.Parameters.AddWithValue("Cidade", usuariosAdministrador.Cidade);
+                            comando.Parameters.AddWithValue("Cep", usuariosAdministrador.Cep);
+                            comando.Parameters.AddWithValue("Estado", usuariosAdministrador.Estado);
 
-                    comando.ExecuteNonQuery();
+                            comando.ExecuteNonQuery();
+                            transacao.Commit();
+                        }
+                        catch (Exception x)
+                        {
+                            transacao.Rollback();
+                            throw x;
+                        }
+                    }
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
         public void Alterar(UsuarioAdministrador usuariosAdministrador, Guid id)
         {
-            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            try
             {
-                try
+                using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
                 {
                     con.Open();
-                    NpgsqlCommand comando = new NpgsqlCommand();
-                    comando.Connection = con;
-                    comando.CommandText = "UPDATE Usuarios SET TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNecimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado WHERE CodUsuario=@CodUsuario ";
+                    using (NpgsqlTransaction transacao = con.BeginTransaction())
+                    {
+                        try
+                        {
+                            NpgsqlCommand comando = new NpgsqlCommand();
+                            comando.Connection = con;
+                            comando.CommandText = "UPDATE Usuarios SET TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNecimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado WHERE CodUsuario=@CodUsuario ";
 
 
-                    comando.Parameters.AddWithValue("CodUsuario", id.ToString());
-                    comando.Parameters.AddWithValue("TipoPessoa", usuariosAdministrador.TipoPessoa);
-                    comando.Parameters.AddWithValue("Nome", usuariosAdministrador.Nome);
-                    comando.Parameters.AddWithValue("Email", usuariosAdministrador.Email);
-                    comando.Parameters.AddWithValue("Senha", usuariosAdministrador.Senha);
-                    comando.Parameters.AddWithValue("DataNacimento", usuariosAdministrador.DataNacimento);
-                    comando.Parameters.AddWithValue("cpfCnpj", usuariosAdministrador.cpfCnpj);
-                    comando.Parameters.AddWithValue("Telefone", usuariosAdministrador.Telefone);
-                    comando.Parameters.AddWithValue("Celular", usuariosAdministrador.Celular);
-                    comando.Parameters.AddWithValue("Rua", usuariosAdministrador.Rua);
-                    comando.Parameters.AddWithValue("Numero", usuariosAdministrador.Numero);
-                    comando.Parameters.AddWithValue("Bairro", usuariosAdministrador.Bairro);
-                    comando.Parameters.AddWithValue("Cidade", usuariosAdministrador.Cidade);
-                    comando.Parameters.AddWithValue("Cep", usuariosAdministrador.Cep);
-                    comando.Parameters.AddWithValue("Estado", usuariosAdministrador.Estado);
+                            comando.Parameters.AddWithValue("CodUsuario", id.ToString());
+                            comando.Parameters.AddWithValue("TipoPessoa", usuariosAdministrador.TipoPessoa);
+                            comando.Parameters.AddWithValue("Nome", usuariosAdministrador.Nome);
+                            comando.Parameters.AddWithValue("Email", usuariosAdministrador.Email);
+                            comando.Parameters.AddWithValue("Senha", usuariosAdministrador.Senha);
+                            comando.Parameters.AddWithValue("DataNacimento", usuariosAdministrador.DataNacimento);
+                            comando.Parameters.AddWithValue("cpfCnpj", usuariosAdministrador.cpfCnpj);
+                            comando.Parameters.AddWithValue("Telefone", usuariosAdministrador.Telefone);
+                            comando.Parameters.AddWithValue("Celular", usuariosAdministrador.Celular);
+                            comando.Parameters.AddWithValue("Rua", usuariosAdministrador.Rua);
+                            comando.Parameters.AddWithValue("Numero", usuariosAdministrador.Numero);
+                            comando.Parameters.AddWithValue("Bairro", usuariosAdministrador.Bairro);
+                            comando.Parameters.AddWithValue("Cidade", usuariosAdministrador.Cidade);
+                            comando.Parameters.AddWithValue("Cep", usuariosAdministrador.Cep);
+                            comando.Parameters.AddWithValue("Estado", usuariosAdministrador.Estado);
 
-                    comando.ExecuteNonQuery();
+                            comando.ExecuteNonQuery();
+                            transacao.Commit();
+                        }
+                        catch (Exception x)
+                        {
+                            transacao.Rollback();
+                            throw x;
+                        }
+                    }
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
         public void Excluir(Guid id)
         {
-            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            try
             {
-                try
+                using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
                 {
                     con.Open();
-                    NpgsqlCommand comando = new NpgsqlCommand();
-                    comando.Connection = con;
-                    comando.CommandText = "DELETE FROM Usuarios WHERE CodUsuario=@CodUsuario ";
+                    using (NpgsqlTransaction transacao = con.BeginTransaction())
+                    {
+                        try
+                        {
+                            NpgsqlCommand comando = new NpgsqlCommand();
+                            comando.Connection = con;
+                            comando.CommandText = "DELETE FROM Usuarios WHERE CodUsuario=@CodUsuario ";
 
-                    comando.Parameters.AddWithValue("CodUsuario", id.ToString());
+                            comando.Parameters.AddWithValue("CodUsuario", id.ToString());
 
-                    comando.ExecuteNonQuery();
+                            comando.ExecuteNonQuery();
+                        }
+                        catch (Exception x)
+                        {
+
+                        }
+                    }
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 

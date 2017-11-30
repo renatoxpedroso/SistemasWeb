@@ -13,5 +13,6 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
         void Alterar(TipoAcoes tipoAcoes, Guid id);
         void Excluir(Guid id);
         TipoAcoes Procurar(Guid id);
+        List<TipoAcoes> ProcurarTodas();
     }
 }

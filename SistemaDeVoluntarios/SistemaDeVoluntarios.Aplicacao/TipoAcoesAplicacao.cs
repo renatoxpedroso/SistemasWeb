@@ -22,5 +22,12 @@ namespace SistemaDeVoluntarios.Aplicacao
         {
             this.tipoAcaoRepositorio.Inserir(tipoAcoes);
         }
+
+        public List<TipoAcoes> ProcurarTodas()
+        {
+            List<TipoAcoes> tipoAcoes;
+            tipoAcoes = tipoAcaoRepositorio.ProcurarTodas();
+            return tipoAcoes;
+        }
     }
 }

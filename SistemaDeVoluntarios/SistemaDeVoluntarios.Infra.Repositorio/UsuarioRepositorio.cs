@@ -117,7 +117,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public Usuarios Procurar(Guid id)
+        public Usuarios ProcurarCodigo(Guid id)
         {
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
@@ -175,6 +175,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
+                    //comando.CommandText = "SELECT * FROM usuarios WHERE email= '"+usuarios.Email+"' and senha= '"+usuarios.Senha+"'";
                     comando.CommandText = "SELECT * FROM usuarios WHERE email=@Email and senha=@Senha ";
 
 
@@ -208,6 +209,57 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     }
 
                     return user;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public List<Usuarios> ProcurarTodos()
+        {
+            List<Usuarios> usuarios = new List<Usuarios>();
+
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "SELECT * FROM usuarios";
+
+
+                    NpgsqlDataReader leitor = comando.ExecuteReader();
+
+                    Usuarios user = null;
+
+                    while (leitor.Read())
+                    {
+                        user = new Usuarios();
+
+                        user.CodUsuario = Guid.Parse(leitor["CodUsuario"].ToString());
+                        user.TipoUsuario = Convert.ToInt16(leitor["TipoUsuario"].ToString());
+                        user.TipoPessoa = Convert.ToInt16(leitor["TipoPessoa"].ToString());
+                        user.Nome = leitor["Nome"].ToString();
+                        user.Email = leitor["Email"].ToString();
+                        user.Senha = leitor["Senha"].ToString();
+                        user.DataNacimento = Convert.ToDateTime(leitor["DataNacimento"].ToString());
+                        user.cpfCnpj = leitor["cpfCnpj"].ToString();
+                        user.Telefone = leitor["Telefone"].ToString();
+                        user.Celular = leitor["Celular"].ToString();
+                        user.Rua = leitor["Rua"].ToString();
+                        user.Numero = leitor["Numero"].ToString();
+                        user.Bairro = leitor["Bairro"].ToString();
+                        user.Cidade = leitor["Cidade"].ToString();
+                        user.Cep = Convert.ToInt32(leitor["Cep"].ToString());
+                        user.Estado = leitor["Estado"].ToString();
+
+                        usuarios.Add(user);
+                    }
+
+                    return usuarios;
                 }
                 catch (Exception ex)
                 {

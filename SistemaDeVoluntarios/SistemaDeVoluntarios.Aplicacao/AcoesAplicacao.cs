@@ -21,5 +21,19 @@ namespace SistemaDeVoluntarios.Aplicacao
         {
             this.acaoRepositorio.Inserir(acoes);
         }
+
+        public List<Acoes> ProcurarTodas()
+        {
+            List<Acoes> acoes;
+            acoes = acaoRepositorio.ProcurarTodas();
+            return acoes;
+        }
+
+        public Acoes Procurar(int Id)
+        {
+            Acoes acao;
+            acao = acaoRepositorio.Procurar(Id);
+            return acao;
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace SistemaDeVoluntarios.Dominio.Entidades
 {
     public class Acoes
     {
+        public int  Id { get; set; }
         public Guid CodAcoes { get; set; }
         public string Assunto { get; set; }
         public string TipoAcao { get; set; }

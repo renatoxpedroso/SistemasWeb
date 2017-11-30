@@ -29,5 +29,12 @@ namespace SistemaDeVoluntarios.Aplicacao
             users = usuarioRepositorio.ProcurarLogin(usuarios);
             return users;
         }
+
+        public List<Usuarios> ProcurarTodos()
+        {
+            List<Usuarios> users;
+            users = usuarioRepositorio.ProcurarTodos();
+            return users;
+        }
     }
 }

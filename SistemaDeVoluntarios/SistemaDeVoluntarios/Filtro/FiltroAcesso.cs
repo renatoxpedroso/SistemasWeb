@@ -11,8 +11,8 @@ namespace SistemaDeVoluntarios.Filtro
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            object usuario = filterContext.HttpContext.Session["usuario"];
-            if (usuario == null)
+            object usuarioLogin = filterContext.HttpContext.Session["usuarioLogin"];
+            if (usuarioLogin == null)
             {
                 filterContext.Result = new RedirectToRouteResult(
                     new System.Web.Routing.RouteValueDictionary(

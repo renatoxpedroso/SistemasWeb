@@ -35,6 +35,21 @@
     <![endif]-->
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    
+    
+    <link href="~/Scripts/bower_components/jquery-ui/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+ 
+
+    <!-- Javascript -->
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+            $("#datepicker").datepicker("show");
+        });
+    </script>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -144,33 +159,95 @@
 
                                         <label for="status">Status</label>
 
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="status" id="status" value="1" checked> Ativa
-                                            </label>
-                                        </div>
+                                        @{
+                                            var acao = ViewBag.acao;
 
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="status" id="status" value="2"> Inativa
-                                            </label>
-                                        </div>
+                                            if (acao != null)
+                                            {
+                                                if (acao.Status == "1")
+                                                            {
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="status" id="status" value="1"> Ativa
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="status" id="status" value="2" checked> Inativa
+                                                        </label>
+                                                    </div>
+                                                }
+                                                else if (acao.Status == "2")
+                                                {
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="status" id="status" value="1"> Ativa
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="status" id="status" value="2" checked> Inativa
+                                                        </label>
+                                                    </div>
+                                                }
+
+                                            }
+                                            else
+                                            {
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="status" id="status" value="1" checked> Ativa
+                                                    </label>
+                                                </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="status" id="status" value="2"> Inativa
+                                                        </label>
+                                                    </div>
+                                            }
+                                        } 
                                     </div>
 
                                    
+                                       
                                     <div class="form-group row">
                                         <label for="assunto" class="col-sm-2 col-form-label">Descrição da Ação</label>
                                         <div class="col-sm-5 rows ">
                                             <!--<input type="text" required="required" class="form-control" name="descricao" id="descricao" placeholder="Descrição">-->
-                                            <textarea class="form-control" name="assunto" id="assunto" rows="3"></textarea>
+                                            @{
+                                                if (acao != null)
+                                                {
+                                                    <textarea class="form-control" name="assunto" id="assunto" rows="3">@acao.Assunto</textarea>
+                                                }
+                                                else
+                                                {
+                                                    <textarea class="form-control" name="assunto" id="assunto" rows="3"></textarea>
+                                                }
+                                            }
+                                           
                                         </div>
                                     </div>
+                                    
+                                    
 
                                     <div class="form-group row">
                                         <label for="datinicio" class="col-lg-2 col-form-label">Data de Inicio</label>
 
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control pull-right form-group-lg" nome="datinicio" id="datinicio" placeholder="Data de Inicio">
+                                            @{
+                                                if (acao != null)
+                                                {
+                                                    <input type="text" class="form-control pull-right form-group-lg" value="@acao.DatInicio" nome="datinicio" id="datepicker" placeholder="Data de Inicio">
+                                                }
+                                                else
+                                                {
+                                                    <input type="text" class="form-control pull-right form-group-lg" nome="datinicio" id="datepicker" placeholder="Data de Inicio">
+                                                }
+                                            }
+                                           
                                         </div>
                                     </div>
 
@@ -178,7 +255,17 @@
                                         <label for="datfim" class="col-lg-2 col-form-label">Data de Fim</label>
 
                                         <div class="col-sm-3">
-                                            <input type="text" class="form-control pull-right form-group-lg" nome="datfim" id="datfim" placeholder="Data de Fim">
+                                            @{
+                                                if (acao != null)
+                                                {
+                                                    <input type="text" class="form-control pull-right form-group-lg" value="@acao.DatFim" nome="datfim" id="datfim" placeholder="Data de Fim">
+                                                }
+                                                else
+                                                {
+                                                    <input type="text" class="form-control pull-right form-group-lg"  nome="datfim" id="datfim" placeholder="Data de Fim">
+                                                }
+                                            }
+                                           
                                         </div>
                                     </div>
 
@@ -187,10 +274,29 @@
 
                                         <div class="col-sm-4">
                                             <select class="form-control" name="tipoacao" id="tipoacao">
-                                                <option>Pintar Igreja</option>
+                                                @foreach (var tipoacao in ViewBag.tipoAcoes)
+                                                {
+                                                    if (acao != null)
+                                                    {
+                                                        if (tipoacao.Nome == acao.TipoAcao)
+                                                        {
+                                                            <option selected="selected" value="@tipoacao.Nome">@tipoacao.Nome</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@tipoacao.Nome">@tipoacao.Nome</option>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@tipoacao.Nome">@tipoacao.Nome</option>
+                                                    }
+
+                                                }
                                             </select>
                                         </div>
                                     </div>
+                           
 
                                     <div class="btn-group row">
                                         <button type="button" class="btn btn-primary">Limpar</button>

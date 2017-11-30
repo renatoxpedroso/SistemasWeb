@@ -27,6 +27,7 @@ namespace SistemaDeVoluntarios.Controllers
             Dominio.Entidades.Usuarios user;
             UsuarioRepositorio usuarioRepositorio;
             UsuarioAplicacao usuarioAplicacao;
+            Models.Usuarios usuariosModel;
 
             string strConexao = ConfigurationManager.ConnectionStrings["conexao"].ToString();
 
@@ -42,18 +43,19 @@ namespace SistemaDeVoluntarios.Controllers
             };
 
             Usuarios users = usuarioAplicacao.ProcurarLogin(user);
+            usuariosModel = Adapter.UsuarioAdapter.ParaModel(users);
 
             if (usuario == users.Email && senha == users.Senha)
             {
                 if ((users.TipoUsuario.Equals(1)) || (users.TipoUsuario.Equals(2)))
                 {
-                    Session["usuario"] = usuario;
+                    Session["usuarioLogin"] = usuariosModel;
 
                     return RedirectToAction("Index", "IndexUsuario");
                 }
                 else
                 {
-                    Session["usuario"] = usuario;
+                    Session["usuarioLogin"] = usuariosModel;
 
                     return RedirectToAction("Index", "Index");
                 }
