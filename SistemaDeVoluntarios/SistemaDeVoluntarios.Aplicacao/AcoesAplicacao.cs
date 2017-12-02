@@ -35,5 +35,12 @@ namespace SistemaDeVoluntarios.Aplicacao
             acao = acaoRepositorio.Procurar(Id);
             return acao;
         }
+
+        public List<Acoes> ProcurarAcoes(string status)
+        {
+            List<Acoes> acoes;
+            acoes = acaoRepositorio.ProcurarAcoes(status);
+            return acoes;
+        }
     }
 }

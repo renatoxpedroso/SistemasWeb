@@ -14,5 +14,6 @@ namespace SistemaDeVoluntarios.Models
         public string DatInicio { get; set; }
         public string DatFim { get; set; }
         public string Status { get; set; }
+        public string Criador { get; set; }
     }
 }

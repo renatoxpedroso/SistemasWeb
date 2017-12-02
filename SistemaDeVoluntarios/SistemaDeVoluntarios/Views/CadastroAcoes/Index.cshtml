@@ -234,7 +234,23 @@
                                         </div>
                                     </div>
                                     
-                                    
+                                    <div class="form-group row">
+                                        <label for="criador" class="col-lg-2 col-form-label">Criador</label>
+
+                                        <div class="col-sm-3">
+                                            @{
+                                                if (acao != null)
+                                                {
+                                                    <input type="text" required="required" class="form-control" name="criador" id="criador" placeholder="Criador" value="@acao.Criador">
+                                                }
+                                                else
+                                                {
+                                                    <input type="text" required="required" class="form-control" name="criador" id="criador" placeholder="Criador">
+                                                }
+                                            }
+
+                                        </div>
+                                    </div>
 
                                     <div class="form-group row">
                                         <label for="datinicio" class="col-lg-2 col-form-label">Data de Inicio</label>

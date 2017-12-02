@@ -54,6 +54,7 @@ namespace SistemaDeVoluntarios.Controllers
             AcoesRepositorio acaoRepositorio;
             AcoesAplicacao acaoAplicacao;
 
+            
             string strConexao = ConfigurationManager.ConnectionStrings["conexao"].ToString();
 
             acaoRepositorio = new AcoesRepositorio(strConexao);
@@ -67,7 +68,8 @@ namespace SistemaDeVoluntarios.Controllers
                 Assunto = acoes.Assunto,
                 DatInicio = Convert.ToDateTime(acoes.DatInicio),
                 DatFim = Convert.ToDateTime(acoes.DatFim),
-                TipoAcao = acoes.TipoAcao
+                TipoAcao = acoes.TipoAcao,
+                Criador = acoes.Criador
 
             };
 

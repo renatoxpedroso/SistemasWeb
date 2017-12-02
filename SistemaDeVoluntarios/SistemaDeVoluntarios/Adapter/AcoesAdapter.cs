@@ -19,7 +19,8 @@ namespace SistemaDeVoluntarios.Adapter
                 DatFim = acao.DatFim.ToString("dd/MM/yyyy"),
                 DatInicio = acao.DatInicio.ToString("dd/MM/yyyy"),
                 TipoAcao = acao.TipoAcao,
-                Status = acao.Status
+                Status = acao.Status,
+                Criador = acao.Criador
             };
         }
 
@@ -48,7 +49,8 @@ namespace SistemaDeVoluntarios.Adapter
                 DatFim = Convert.ToDateTime( acao.DatFim),
                 DatInicio = Convert.ToDateTime(acao.DatInicio),
                 TipoAcao = acao.TipoAcao,
-                Status = acao.Status
+                Status = acao.Status,
+                Criador = acao.Criador
             };
         }
     }

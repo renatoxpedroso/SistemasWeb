@@ -33,8 +33,8 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         {
                             NpgsqlCommand comando = new NpgsqlCommand();
                             comando.Connection = con;
-                            comando.CommandText = "INSERT INTO Acoes (CodAcao, Assunto, TipoAcao, DatInicio, DatFim, Status) " +
-                                "Values(@CodAcao, @Assunto, @TipoAcao, @DatInicio, @DatFim, @Status);";
+                            comando.CommandText = "INSERT INTO Acoes (CodAcao, Assunto, TipoAcao, DatInicio, DatFim, Status, Criador) " +
+                                "Values(@CodAcao, @Assunto, @TipoAcao, @DatInicio, @DatFim, @Status, @Criador);";
 
                             comando.Parameters.AddWithValue("CodAcao", Guid.NewGuid());
                             comando.Parameters.AddWithValue("Assunto", acoes.Assunto);
@@ -42,6 +42,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                             comando.Parameters.AddWithValue("DatInicio", acoes.DatInicio);
                             comando.Parameters.AddWithValue("DatFim", acoes.DatFim);
                             comando.Parameters.AddWithValue("Status", acoes.Status);
+                            comando.Parameters.AddWithValue("Criador", acoes.Criador);
 
 
                             comando.ExecuteNonQuery();
@@ -164,6 +165,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         acao.DatInicio = Convert.ToDateTime(leitor["DatInicio"].ToString());
                         acao.DatFim = Convert.ToDateTime(leitor["DatFim"].ToString());
                         acao.Status = leitor["Status"].ToString();
+                        acao.Criador = leitor["Criador"].ToString();
                     }
 
                     return acao;
@@ -203,6 +205,52 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         acao.DatInicio = Convert.ToDateTime(leitor["DatInicio"].ToString());
                         acao.DatFim = Convert.ToDateTime(leitor["DatFim"].ToString());
                         acao.Status = leitor["Status"].ToString();
+                        acao.Criador = leitor["Criador"].ToString();
+
+                        acoes.Add(acao);
+                    }
+
+                    return acoes;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public List<Acoes> ProcurarAcoes(string status)
+        {
+            List<Acoes> acoes = new List<Acoes>();
+
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "SELECT * FROM Acoes WHERE Status=@Status ";
+
+
+                    comando.Parameters.AddWithValue("Status", status);
+
+                    NpgsqlDataReader leitor = comando.ExecuteReader();
+
+                    Acoes acao = null;
+
+                    while (leitor.Read())
+                    {
+                        acao = new Acoes();
+
+                        acao.Id = Convert.ToInt32(leitor["Id"].ToString());
+                        acao.CodAcoes = Guid.Parse(leitor["CodAcao"].ToString());
+                        acao.Assunto = leitor["assunto"].ToString();
+                        acao.TipoAcao = leitor["TipoAcao"].ToString();
+                        acao.DatInicio = Convert.ToDateTime(leitor["DatInicio"].ToString());
+                        acao.DatFim = Convert.ToDateTime(leitor["DatFim"].ToString());
+                        acao.Status = leitor["Status"].ToString();
+                        acao.Criador = leitor["Criador"].ToString();
 
                         acoes.Add(acao);
                     }

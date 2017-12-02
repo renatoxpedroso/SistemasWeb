@@ -15,5 +15,6 @@ namespace SistemaDeVoluntarios.Dominio.Entidades
         public DateTime DatInicio { get; set; }
         public DateTime DatFim { get; set; }
         public string Status { get; set; }
+        public string Criador { get; set; }
     }
 }

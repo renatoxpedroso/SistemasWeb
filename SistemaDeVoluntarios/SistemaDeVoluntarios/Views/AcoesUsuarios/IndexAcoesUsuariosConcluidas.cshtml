@@ -115,14 +115,14 @@
                         <div class="box">
                             <div class="box-header">
                                 <h3 class="box-title">Tabela de Ações Concluídas</h3>
-                                <div class="box-tools">
+                                <!--div class="box-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
                                         <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
                                         <div class="input-group-btn">
                                             <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                                         </div>
                                     </div>
-                                </div>
+                                </div-->
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
@@ -130,21 +130,25 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Assunto</th>
-                                        <th>Solicitante</th>
+                                        <th>Criador</th>
                                         <th>Tipo</th>
                                         <th>Data Inicio</th>
                                         <th>Data Fim</th>
                                         <th>Status</th>
                                     </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Cortar a grama do lar de idosos</td>
-                                        <td>Alexandre</td>
-                                        <td>Trabalho Voluntário</td>
-                                        <td>12-10-2017</td>
-                                        <td>12-10-2017</td>
-                                        <td><span class="label label-success">Concluída</span></td>
-                                    </tr>
+                                    @foreach (var acao in ViewBag.acoes)
+                                    {
+                                        <tr>
+                                            <td>@acao.Id</td>
+                                            <td>@acao.Assunto</td>
+                                            <td>@acao.Criador</td>
+                                            <td>@acao.TipoAcao</td>
+                                            <td>@acao.DatInicio</td>
+                                            <td>@acao.DatFim</td>
+                                            <td><span class="label label-success">Concluída</span></td>
+                                        </tr>
+                                    }
+                                  
                                 </table>
                             </div>
                             <!-- /.box-body -->
