@@ -19,6 +19,7 @@ namespace SistemaDeVoluntarios.Controllers
         // GET: CadastroAdministradores
         public ActionResult Index()
         {
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
             return View();
         }
 

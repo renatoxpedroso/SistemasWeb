@@ -24,6 +24,7 @@ namespace SistemaDeVoluntarios.Controllers
             acoesModel = Adapter.AcoesAdapter.ParaModel(acoes);
 
             ViewBag.acoes = acoesModel;
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
 
             return View();
         }
@@ -38,6 +39,7 @@ namespace SistemaDeVoluntarios.Controllers
             acoesModel = Adapter.AcoesAdapter.ParaModel(acoes);
 
             ViewBag.acoes = acoesModel;
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
 
             return View();
         }
@@ -52,6 +54,7 @@ namespace SistemaDeVoluntarios.Controllers
             acoesModel = Adapter.AcoesAdapter.ParaModel(acoes);
 
             ViewBag.acoes = acoesModel;
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
 
             return View();
         }

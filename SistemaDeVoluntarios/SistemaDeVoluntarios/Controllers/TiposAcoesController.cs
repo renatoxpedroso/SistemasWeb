@@ -19,6 +19,7 @@ namespace SistemaDeVoluntarios.Controllers
         // GET: TiposAcoes
         public ActionResult Index()
         {
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
             return View();
         }
 

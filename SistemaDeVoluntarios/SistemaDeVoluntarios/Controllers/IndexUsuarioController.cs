@@ -27,6 +27,7 @@ namespace SistemaDeVoluntarios.Controllers
             usuariosModel = Adapter.UsuarioAdapter.ParaModel(usuarios);
 
             ViewBag.usuarios = usuariosModel;
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
 
             return View();
         }

@@ -38,12 +38,14 @@ namespace SistemaDeVoluntarios.Controllers
             }
 
             ViewBag.tipoAcoes = tipoAcaoModel;
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
 
             return View();
         }
 
         public ActionResult IndexUsuario()
         {
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
             return View();
         }
 
