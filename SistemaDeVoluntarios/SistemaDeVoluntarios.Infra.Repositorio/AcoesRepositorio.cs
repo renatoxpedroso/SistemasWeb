@@ -232,7 +232,8 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.Connection = con;
                     comando.CommandText = "SELECT * FROM Acoes WHERE datInicio >= @Data";
 
-                    comando.Parameters.AddWithValue("Data", localDate);
+                    
+                    comando.Parameters.AddWithValue("Data", DateTime.Parse(localDate.ToString("yyyy/MM/dd")));
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 
@@ -274,9 +275,9 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "SELECT * FROM Acoes WHERE datInicio <= @Data and datFim <= @Data";
+                    comando.CommandText = "SELECT * FROM Acoes WHERE datInicio <= @Data and datFim >= @Data";
 
-                    comando.Parameters.AddWithValue("Data", localDate);
+                    comando.Parameters.AddWithValue("Data", DateTime.Parse(localDate.ToString("yyyy/MM/dd")));
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 
@@ -320,7 +321,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     comando.Connection = con;
                     comando.CommandText = "SELECT * FROM Acoes WHERE datFim <= @Data";
 
-                    comando.Parameters.AddWithValue("Data", localDate);
+                    comando.Parameters.AddWithValue("Data", DateTime.Parse(localDate.ToString("yyyy/MM/dd")));
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 
