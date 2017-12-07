@@ -19,7 +19,7 @@ namespace SistemaDeVoluntarios.Controllers
             List<Models.Acoes> acoesModel;
             AcoesRepositorio acaoRepositorio = new AcoesRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
             AcoesAplicacao acaoAplicacao = new AcoesAplicacao(acaoRepositorio);
-            List<Dominio.Entidades.Acoes> acoes = acaoAplicacao.ProcurarAcoes("2");
+            List<Dominio.Entidades.Acoes> acoes = acaoAplicacao.ProcurarAcoesAndamento();
 
             acoesModel = Adapter.AcoesAdapter.ParaModel(acoes);
 
@@ -34,7 +34,7 @@ namespace SistemaDeVoluntarios.Controllers
             List<Models.Acoes> acoesModel;
             AcoesRepositorio acaoRepositorio = new AcoesRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
             AcoesAplicacao acaoAplicacao = new AcoesAplicacao(acaoRepositorio);
-            List<Dominio.Entidades.Acoes> acoes = acaoAplicacao.ProcurarAcoes("3");
+            List<Dominio.Entidades.Acoes> acoes = acaoAplicacao.ProcurarAcoesConcluidas();
 
             acoesModel = Adapter.AcoesAdapter.ParaModel(acoes);
 
@@ -49,7 +49,7 @@ namespace SistemaDeVoluntarios.Controllers
             List<Models.Acoes> acoesModel;
             AcoesRepositorio acaoRepositorio = new AcoesRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
             AcoesAplicacao acaoAplicacao = new AcoesAplicacao(acaoRepositorio);
-            List<Dominio.Entidades.Acoes> acoes = acaoAplicacao.ProcurarAcoes("1");
+            List<Dominio.Entidades.Acoes> acoes = acaoAplicacao.ProcurarAcoesRecente();
 
             acoesModel = Adapter.AcoesAdapter.ParaModel(acoes);
 

@@ -170,28 +170,28 @@
                                                 if (acao.Status == "1")
                                                             {
                                                     <div class="form-check form-check-inline">
-                                                        <label class="form-check-label">
-                                                            <input class="form-check-input" type="radio" name="status" id="status" value="1"> Ativa
+                                                        <label for="status" class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="acoes.status" id="status" value="1"> Ativa
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check form-check-inline">
-                                                        <label class="form-check-label">
-                                                            <input class="form-check-input" type="radio" name="status" id="status" value="2" checked> Inativa
+                                                        <label for="status" class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="acoes.status" id="status" value="2" checked> Inativa
                                                         </label>
                                                     </div>
                                                 }
                                                 else if (acao.Status == "2")
                                                 {
                                                     <div class="form-check form-check-inline">
-                                                        <label class="form-check-label">
-                                                            <input class="form-check-input" type="radio" name="status" id="status" value="1"> Ativa
+                                                        <label for="status" class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="acoes.status" id="status" value="1"> Ativa
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check form-check-inline">
-                                                        <label class="form-check-label">
-                                                            <input class="form-check-input" type="radio" name="status" id="status" value="2" checked> Inativa
+                                                        <label for="status" class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="acoes.status" id="status" value="2" checked> Inativa
                                                         </label>
                                                     </div>
                                                 }
@@ -200,14 +200,14 @@
                                             else
                                             {
                                                 <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="radio" name="status" id="status" value="1" checked> Ativa
+                                                    <label for="status" class="form-check-label">
+                                                        <input class="form-check-input" type="radio" name="acoes.status" id="status" value="1" checked> Ativa
                                                     </label>
                                                 </div>
 
                                                     <div class="form-check form-check-inline">
-                                                        <label class="form-check-label">
-                                                            <input class="form-check-input" type="radio" name="status" id="status" value="2"> Inativa
+                                                        <label for="status" class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="acoes.status" id="status" value="2"> Inativa
                                                         </label>
                                                     </div>
                                             }
@@ -223,11 +223,11 @@
                                             @{
                                                 if (acao != null)
                                                 {
-                                                    <textarea class="form-control" name="assunto" id="assunto" rows="3">@acao.Assunto</textarea>
+                                                    <textarea class="form-control" name="acoes.assunto" id="assunto" rows="3">@acao.Assunto</textarea>
                                                 }
                                                 else
                                                 {
-                                                    <textarea class="form-control" name="assunto" id="assunto" rows="3"></textarea>
+                                                    <textarea class="form-control" name="acoes.assunto" id="assunto" rows="3"></textarea>
                                                 }
                                             }
                                            
@@ -241,11 +241,11 @@
                                             @{
                                                 if (acao != null)
                                                 {
-                                                    <input type="text" required="required" class="form-control" name="criador" id="criador" placeholder="Criador" value="@acao.Criador">
+                                                    <input type="text" required="required" class="form-control" name="acoes.criador" id="criador" placeholder="Criador" value="@acao.Criador">
                                                 }
                                                 else
                                                 {
-                                                    <input type="text" required="required" class="form-control" name="criador" id="criador" placeholder="Criador">
+                                                    <input type="text" required="required" class="form-control" name="acoes.criador" id="criador" placeholder="Criador">
                                                 }
                                             }
 
@@ -259,11 +259,11 @@
                                             @{
                                                 if (acao != null)
                                                 {
-                                                    <input type="date" class="form-control pull-right form-group-lg" data-val-required="Inserir a data de inicio."  value="@acao.DatInicio" nome="datinicio" id="datinicio" placeholder="Data de Inicio">
+                                                    <input type="date" required="required" class="form-control" valu="@acao.DatInicio" name="acoes.datinicio" id="datinicio" placeholder="Data de Inicio">
                                                 }
                                                 else
                                                 {
-                                                    <input type="date" class="form-control pull-right form-group-lg" data-val-required="Inserir a data de inicio."  nome="datinicio" id="datinicio" placeholder="Data de Inicio">
+                                                    <input type="date" required="required" class="form-control" name="acoes.datinicio" id="datinicio" placeholder="Data de Inicio">
                                                 }
                                             }
                                            
@@ -277,11 +277,11 @@
                                             @{
                                                 if (acao != null)
                                                 {
-                                                    <input type="date" class="form-control pull-right form-group-lg"  data-val="true" data-val-required="Inserir a data de fim." value="@acao.DatFim" nome="datfim" id="datfim" placeholder="Data de Fim">
+                                                    <input type="date" required="required" class="form-control" value="@acao.DatFim" name="acoes.datfim" id="datfim" placeholder="Data de Fim">
                                                 }
                                                 else
                                                 {
-                                                    <input type="date" class="form-control pull-right form-group-lg"  data-val="true" data-val-required="Inserir a data de fim."  nome="datfim" id="datfim" placeholder="Data de Fim">
+                                                    <input type="date" required="required" class="form-control" name="acoes.datfim" id="datfim" placeholder="Data de Fim">
                                                 }
                                             }
                                            
@@ -292,7 +292,7 @@
                                         <label for="tipoacao" class="col-lg-2 col-form-label">Tipo da Ação</label>
 
                                         <div class="col-sm-4">
-                                            <select class="form-control" name="tipoacao" id="tipoacao">
+                                            <select class="form-control" name="acoes.tipoacao" id="tipoacao">
                                                 @foreach (var tipoacao in ViewBag.tipoAcoes)
                                                 {
                                                     if (acao != null)

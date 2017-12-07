@@ -15,6 +15,8 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
         void Excluir(Guid id);
         Acoes Procurar(int id);
         List<Acoes> ProcurarTodas();
-        List<Acoes> ProcurarAcoes(string status);
+        List<Acoes> ProcurarAcoesRecente();
+        List<Acoes> ProcurarAcoesAndamento();
+        List<Acoes> ProcurarAcoesConcluidas();
     }
 }

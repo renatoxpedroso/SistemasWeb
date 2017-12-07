@@ -16,8 +16,8 @@ namespace SistemaDeVoluntarios.Adapter
                 Id = acao.Id,
                 CodAcoes = acao.CodAcoes,
                 Assunto = acao.Assunto,
-                DatFim = acao.DatFim.ToString("dd/MM/yyyy"),
-                DatInicio = acao.DatInicio.ToString("dd/MM/yyyy"),
+                DatFim = acao.DatFim,
+                DatInicio = acao.DatInicio,
                 TipoAcao = acao.TipoAcao,
                 Status = acao.Status,
                 Criador = acao.Criador
@@ -46,8 +46,8 @@ namespace SistemaDeVoluntarios.Adapter
                 Id = acao.Id,
                 CodAcoes = acao.CodAcoes,
                 Assunto = acao.Assunto,
-                DatFim = Convert.ToDateTime( acao.DatFim),
-                DatInicio = Convert.ToDateTime(acao.DatInicio),
+                DatFim = acao.DatFim,
+                DatInicio = acao.DatInicio,
                 TipoAcao = acao.TipoAcao,
                 Status = acao.Status,
                 Criador = acao.Criador

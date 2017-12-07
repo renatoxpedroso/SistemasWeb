@@ -219,10 +219,10 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public List<Acoes> ProcurarAcoes(string status)
+        public List<Acoes> ProcurarAcoesRecente()
         {
             List<Acoes> acoes = new List<Acoes>();
-
+            DateTime localDate = DateTime.Now;
             using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
             {
                 try
@@ -230,10 +230,97 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     con.Open();
                     NpgsqlCommand comando = new NpgsqlCommand();
                     comando.Connection = con;
-                    comando.CommandText = "SELECT * FROM Acoes WHERE Status=@Status ";
+                    comando.CommandText = "SELECT * FROM Acoes WHERE datInicio >= @Data";
 
+                    comando.Parameters.AddWithValue("Data", localDate);
 
-                    comando.Parameters.AddWithValue("Status", status);
+                    NpgsqlDataReader leitor = comando.ExecuteReader();
+
+                    Acoes acao = null;
+
+                    while (leitor.Read())
+                    {
+                        acao = new Acoes();
+
+                        acao.Id = Convert.ToInt32(leitor["Id"].ToString());
+                        acao.CodAcoes = Guid.Parse(leitor["CodAcao"].ToString());
+                        acao.Assunto = leitor["assunto"].ToString();
+                        acao.TipoAcao = leitor["TipoAcao"].ToString();
+                        acao.DatInicio = Convert.ToDateTime(leitor["DatInicio"].ToString());
+                        acao.DatFim = Convert.ToDateTime(leitor["DatFim"].ToString());
+                        acao.Status = leitor["Status"].ToString();
+                        acao.Criador = leitor["Criador"].ToString();
+
+                        acoes.Add(acao);
+                    }
+
+                    return acoes;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public List<Acoes> ProcurarAcoesAndamento()
+        {
+            List<Acoes> acoes = new List<Acoes>();
+            DateTime localDate = DateTime.Now;
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "SELECT * FROM Acoes WHERE datInicio <= @Data and datFim <= @Data";
+
+                    comando.Parameters.AddWithValue("Data", localDate);
+
+                    NpgsqlDataReader leitor = comando.ExecuteReader();
+
+                    Acoes acao = null;
+
+                    while (leitor.Read())
+                    {
+                        acao = new Acoes();
+
+                        acao.Id = Convert.ToInt32(leitor["Id"].ToString());
+                        acao.CodAcoes = Guid.Parse(leitor["CodAcao"].ToString());
+                        acao.Assunto = leitor["assunto"].ToString();
+                        acao.TipoAcao = leitor["TipoAcao"].ToString();
+                        acao.DatInicio = Convert.ToDateTime(leitor["DatInicio"].ToString());
+                        acao.DatFim = Convert.ToDateTime(leitor["DatFim"].ToString());
+                        acao.Status = leitor["Status"].ToString();
+                        acao.Criador = leitor["Criador"].ToString();
+
+                        acoes.Add(acao);
+                    }
+
+                    return acoes;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public List<Acoes> ProcurarAcoesConcluidas()
+        {
+            List<Acoes> acoes = new List<Acoes>();
+            DateTime localDate = DateTime.Now;
+            using (NpgsqlConnection con = new NpgsqlConnection(strConexao))
+            {
+                try
+                {
+                    con.Open();
+                    NpgsqlCommand comando = new NpgsqlCommand();
+                    comando.Connection = con;
+                    comando.CommandText = "SELECT * FROM Acoes WHERE datFim <= @Data";
+
+                    comando.Parameters.AddWithValue("Data", localDate);
 
                     NpgsqlDataReader leitor = comando.ExecuteReader();
 

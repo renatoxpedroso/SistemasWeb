@@ -36,10 +36,24 @@ namespace SistemaDeVoluntarios.Aplicacao
             return acao;
         }
 
-        public List<Acoes> ProcurarAcoes(string status)
+        public List<Acoes> ProcurarAcoesRecente()
         {
             List<Acoes> acoes;
-            acoes = acaoRepositorio.ProcurarAcoes(status);
+            acoes = acaoRepositorio.ProcurarAcoesRecente();
+            return acoes;
+        }
+
+        public List<Acoes> ProcurarAcoesAndamento()
+        {
+            List<Acoes> acoes;
+            acoes = acaoRepositorio.ProcurarAcoesAndamento();
+            return acoes;
+        }
+
+        public List<Acoes> ProcurarAcoesConcluidas()
+        {
+            List<Acoes> acoes;
+            acoes = acaoRepositorio.ProcurarAcoesConcluidas();
             return acoes;
         }
     }

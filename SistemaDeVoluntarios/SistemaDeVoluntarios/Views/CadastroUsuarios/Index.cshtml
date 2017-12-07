@@ -89,13 +89,13 @@
 
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="tipousuario" id="tipousuario" value="1" checked> Entidade
+                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="1" checked> Entidade
                                             </label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="tipousuario" id="tipousuario" value="2"> Voluntário
+                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="2"> Voluntário
                                             </label>
                                         </div>
                                     </div>
@@ -109,13 +109,13 @@
 
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="tipopessoa" id="tipopessoa" value="1"> Física
+                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="1"> Física
                                             </label>
                                         </div>
 
                                         <div class="form-check form-check-inline">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="tipopessoa" id="tipopessoa" value="2"> Jurídica
+                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="2"> Jurídica
                                             </label>
                                         </div>
 
@@ -123,21 +123,21 @@
                                     <div class="form-group row">
                                         <label for="nome" class="col-sm-2 col-form-label">Nome*</label>
                                         <div class="col-sm-5">
-                                            <input type="text" required="required" class="form-control" name="nome" id="nome" placeholder="Nome Usuário">
+                                            <input type="text" required="required" class="form-control" name="usuarios.nome" id="nome" placeholder="Nome Usuário">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="email" class="col-lg-2 col-form-label">E-mail*</label>
                                         <div class="col-sm-5">
-                                            <input type="email" required="required" class="form-control" name="email" id="email" placeholder="E-mail">
+                                            <input type="email" required="required" class="form-control" name="usuarios.email" id="email" placeholder="E-mail">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="senha" class="col-lg-2 col-form-label">Senha*</label>
                                         <div class="col-sm-5">
-                                            <input type="password" required="required" class="form-control" name="senha" id="senha" placeholder="Senha">
+                                            <input type="password" required="required" class="form-control" name="usuarios.senha" id="senha" placeholder="Senha">
                                         </div>
                                     </div>
 
@@ -145,28 +145,28 @@
                                         <label for="datanacimento" class="col-lg-2 col-form-label">Data de Nascimento</label>
 
                                         <div class="col-sm-3">
-                                            <input type="date" class="form-control pull-right form-group-lg" data-val-required="Inserir a data de nascimento." nome="datanacimento" id="datanacimento" placeholder="Data de Nasciemento">
+                                            <input type="date" required="required" class="form-control" name="usuarios.datanacimento" id="datanacimento" placeholder="Data de Nascimento">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="cpfCnpj" class="col-lg-2 col-form-label">CPF*</label>
                                         <div class="col-sm-3">
-                                            <input type="text" required="required" class="form-control" name="cpfCnpj" id="cpfCnpj" placeholder="CPF">
+                                            <input type="text" required="required" class="form-control" name="usuarios.cpfCnpj" id="cpfCnpj" placeholder="CPF">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="telefone" class="col-lg-2 col-form-label">Telefone</label>
                                         <div class="col-lg-3">
-                                            <input type="tel" class="form-control" name="telefone" id="telefone" placeholder="Telefone">
+                                            <input type="tel" class="form-control" name="usuarios.telefone" id="telefone" placeholder="Telefone">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="celular" class="col-lg-2 col-form-label">Celular*</label>
                                         <div class="col-sm-3">
-                                            <input type="tel" required="required" class="form-control" name="celular" id="celular" placeholder="Celular">
+                                            <input type="tel" required="required" class="form-control" name="usuarios.celular" id="celular" placeholder="Celular">
                                         </div>
                                     </div>
 
@@ -180,21 +180,21 @@
                                     <div class="form-group row">
                                         <label for="rua" class="col-lg-2 col-form-label">Rua*</label>
                                         <div class="col-sm-5">
-                                            <input type="text" required="required" class="form-control" name="rua" id="rua" placeholder="Rua">
+                                            <input type="text" required="required" class="form-control" name="usuarios.rua" id="rua" placeholder="Rua">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="numero" class="col-lg-2 col-form-label">Numero*</label>
                                         <div class="col-sm-2">
-                                            <input type="text" required="required" class="form-control" name="numero" id="numero" placeholder="Numero">
+                                            <input type="text" required="required" class="form-control" name="usuarios.numero" id="numero" placeholder="Numero">
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="bairro" class="col-lg-2 col-form-label">Bairro*</label>
                                         <div class="col-sm-5">
-                                            <input type="text" required="required" class="form-control" name="bairro" id="bairro" placeholder="Bairro">
+                                            <input type="text" required="required" class="form-control" name="usuarios.bairro" id="bairro" placeholder="Bairro">
                                         </div>
                                     </div>
 
@@ -202,7 +202,7 @@
                                         <label for="estado" class="col-lg-2 col-form-label">Estado*</label>
 
                                         <div class="col-sm-4">
-                                            <select class="form-control" name="estado" id="estado">
+                                            <select class="form-control" name="usuarios.estado" id="estado">
                                                 <option>Acre</option>
                                                 <option>Alagoas</option>
                                                 <option>Amapá</option>
@@ -237,7 +237,7 @@
                                     <div class="form-group row">
                                         <label for="cidade" class="col-lg-2 col-form-label">Cidade*</label>
                                         <div class="col-sm-4">
-                                            <select class="form-control" name="cidade" id="cidade">
+                                            <select class="form-control" name="usuarios.cidade" id="cidade">
                                                 <option>Agua Santa</option>
                                                 <option>Agudo</option>
                                                 <option>Ajuricaba</option>
@@ -267,7 +267,7 @@
                                     <div class="form-group row">
                                         <label for="cep" class="col-lg-2 col-form-label">CEP*</label>
                                         <div class="col-sm-2">
-                                            <input type="tel" required="required" class="form-control" name="cep" id="cep" placeholder="CEP">
+                                            <input type="tel" required="required" class="form-control" name="usuarios.cep" id="cep" placeholder="CEP">
                                         </div>
                                     </div>
 
