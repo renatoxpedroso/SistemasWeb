@@ -182,7 +182,19 @@
                                             {
                                                 <td>Juridica</td>
                                             }
-                                            <td><span class="label label-success">Aprovado</span></td>
+
+                                            @if (usu.Status == 1)
+                                            {
+                                                <td><a href="/Usuarios/AlterarStatus/@usu.Id"><span class="label label-warning">Pendente</span></a></td>
+                                                <td><a href="/CadastroUsuarios/Editar/@usu.Id"><i class="fa fa-edit"></i></a></td>
+                                            }
+                                            else
+                                            {
+                                                <td><span class="label label-success">Aprovado</span></td>
+                                                <td><a href="/CadastroUsuarios/Editar/@usu.Id"><i class="fa fa-edit"></i></a></td>
+                                            }
+
+                                            
                                         </tr>
                                     }
                                 </table>

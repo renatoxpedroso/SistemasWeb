@@ -15,6 +15,7 @@ namespace SistemaDeVoluntarios.Controllers
         // GET: Usuarios
         public ActionResult Index()
         {
+            
             List<Models.Usuarios> usuariosModel;
             UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
             UsuarioAplicacao usuarioAplicacao = new UsuarioAplicacao(usuarioRepositorio);
@@ -28,6 +29,14 @@ namespace SistemaDeVoluntarios.Controllers
             return View();
         }
 
+        public ActionResult AlterarStatus(int id)
+        {
+            UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
+            UsuarioAplicacao usuarioAplicacao = new UsuarioAplicacao(usuarioRepositorio);
+            usuarioAplicacao.AlterarStatus(2, id);
+
+            return RedirectToAction("index");
+        }
 
         
     }

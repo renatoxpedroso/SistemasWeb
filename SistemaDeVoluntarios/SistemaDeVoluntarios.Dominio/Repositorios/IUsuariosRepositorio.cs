@@ -11,8 +11,9 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
     {
         void Inserir(Usuarios usuarios);
         void Alterar(Usuarios usuarios, Guid id);
+        void AlterarStatus(int status, int id);
         void Excluir(Guid id);
-        Usuarios ProcurarCodigo(Guid id);
+        Usuarios ProcurarCodigo(int id);
         Usuarios ProcurarLogin(Usuarios usuarios);
         List<Usuarios> ProcurarTodos();
     }

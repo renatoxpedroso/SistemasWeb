@@ -74,3 +74,4 @@ C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVolunta
 C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
 C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\renato\Desktop\Renato\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\obj\Debug\SistemaDeVoluntarios.Infra.Repositorio.Teste.csproj.CoreCompileInputs.cache
+C:\Users\T-Gamer\Desktop\Web\SistemasWeb\SistemaDeVoluntarios\SistemaDeVoluntarios.Infra.Repositorio.Teste\bin\Debug\pt-BR\Microsoft.QualityTools.Testing.Fakes.resources.dll

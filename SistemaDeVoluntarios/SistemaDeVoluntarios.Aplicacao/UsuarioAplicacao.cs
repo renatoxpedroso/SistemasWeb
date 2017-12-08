@@ -30,11 +30,24 @@ namespace SistemaDeVoluntarios.Aplicacao
             return users;
         }
 
+        public Usuarios ProcurarCodigo(int Id)
+        {
+            Usuarios users;
+            users = usuarioRepositorio.ProcurarCodigo(Id);
+            return users;
+        }
+
         public List<Usuarios> ProcurarTodos()
         {
             List<Usuarios> users;
             users = usuarioRepositorio.ProcurarTodos();
             return users;
         }
+
+        public void AlterarStatus(int status, int id)
+        {
+            this.usuarioRepositorio.AlterarStatus(status, id);
+        }
+
     }
 }

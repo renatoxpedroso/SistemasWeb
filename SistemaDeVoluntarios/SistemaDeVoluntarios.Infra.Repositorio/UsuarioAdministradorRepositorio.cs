@@ -34,8 +34,8 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         {
                             NpgsqlCommand comando = new NpgsqlCommand();
                             comando.Connection = con;
-                            comando.CommandText = "INSERT INTO Usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado) " +
-                                "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado);";
+                            comando.CommandText = "INSERT INTO Usuarios (CodUsuario, TipoUsuario, TipoPessoa, Nome, Email, Senha, DataNacimento, cpfCnpj, Telefone, Celular, Rua, Numero, Bairro, Cidade, Cep, Estado, Status) " +
+                                "Values(@CodUsuario, @TipoUsuario, @TipoPessoa, @Nome, @Email, @Senha, @DataNacimento, @cpfCnpj, @Telefone, @Celular, @Rua, @Numero, @Bairro, @Cidade, @Cep, @Estado, @Status);";
 
                             comando.Parameters.AddWithValue("CodUsuario", Guid.NewGuid());
                             comando.Parameters.AddWithValue("TipoUsuario", 3);
@@ -53,6 +53,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                             comando.Parameters.AddWithValue("Cidade", usuariosAdministrador.Cidade);
                             comando.Parameters.AddWithValue("Cep", usuariosAdministrador.Cep);
                             comando.Parameters.AddWithValue("Estado", usuariosAdministrador.Estado);
+                            comando.Parameters.AddWithValue("Status", 1);
 
                             comando.ExecuteNonQuery();
                             transacao.Commit();
@@ -84,7 +85,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         {
                             NpgsqlCommand comando = new NpgsqlCommand();
                             comando.Connection = con;
-                            comando.CommandText = "UPDATE Usuarios SET TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNecimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado WHERE CodUsuario=@CodUsuario ";
+                            comando.CommandText = "UPDATE Usuarios SET TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNecimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado, Status=@Status WHERE CodUsuario=@CodUsuario ";
 
 
                             comando.Parameters.AddWithValue("CodUsuario", id.ToString());
@@ -102,6 +103,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                             comando.Parameters.AddWithValue("Cidade", usuariosAdministrador.Cidade);
                             comando.Parameters.AddWithValue("Cep", usuariosAdministrador.Cep);
                             comando.Parameters.AddWithValue("Estado", usuariosAdministrador.Estado);
+                            comando.Parameters.AddWithValue("Status", usuariosAdministrador.Status);
 
                             comando.ExecuteNonQuery();
                             transacao.Commit();
@@ -174,6 +176,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                     {
                         user = new UsuarioAdministrador();
 
+                        user.Id = Convert.ToInt32(leitor["Id"].ToString());
                         user.CodUsuario = Guid.Parse(leitor["CodUsuario"].ToString());
                         user.TipoUsuario = Convert.ToInt16(leitor["TipoUsuario"].ToString());
                         user.TipoPessoa = Convert.ToInt16(leitor["TipoPessoa"].ToString());
@@ -190,6 +193,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         user.Cidade = leitor["Cidade"].ToString();
                         user.Cep = Convert.ToInt16(leitor["Cep"].ToString());
                         user.Estado = leitor["Estado"].ToString();
+                        user.Status = Convert.ToInt16(leitor["Status"].ToString());
                     }
 
                     return user;

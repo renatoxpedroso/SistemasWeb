@@ -22,6 +22,15 @@ namespace SistemaDeVoluntarios.Controllers
             return View();
         }
 
+        [Filtro.FiltroAcess]
+        public ActionResult IndexAlteracao()
+        {
+            ViewBag.usuario = Session["usuarioAlteracao"];
+            ViewBag.usuarioLogin = Session["usuarioLogin"];
+
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Gravar(Usuarios usuarios)
         {
@@ -60,6 +69,21 @@ namespace SistemaDeVoluntarios.Controllers
             usuarioAplicacao.Inserir(user);
 
             return RedirectToAction("index");
+        }
+
+        public ActionResult Editar(int Id)
+        {
+            Models.Usuarios usuarioModel;
+            UsuarioRepositorio usuariosRepositorio = new UsuarioRepositorio(ConfigurationManager.ConnectionStrings["conexao"].ToString());
+            UsuarioAplicacao usuarioAplicacao = new UsuarioAplicacao(usuariosRepositorio);
+            Dominio.Entidades.Usuarios usuario = usuarioAplicacao.ProcurarCodigo(Id);
+
+            usuarioModel = Adapter.UsuarioAdapter.ParaModel(usuario);
+
+            Session["usuarioAlteracao"] = usuarioModel;
+
+
+            return RedirectToAction("IndexAlteracao");
         }
     }
 }

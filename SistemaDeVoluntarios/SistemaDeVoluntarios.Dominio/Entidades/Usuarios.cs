@@ -8,6 +8,7 @@ namespace SistemaDeVoluntarios.Dominio.Entidades
 {
     public class Usuarios
     {
+        public int Id { get; set; }
         public Guid CodUsuario { get; set; }
         public int TipoUsuario { get; set; }
         public int TipoPessoa { get; set; }
@@ -24,5 +25,6 @@ namespace SistemaDeVoluntarios.Dominio.Entidades
         public string Cidade { get; set; }
         public int Cep { get; set; }
         public string Estado { get; set; }
+        public int Status { get; set; }
     }
 }

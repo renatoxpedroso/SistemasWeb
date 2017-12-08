@@ -14,6 +14,7 @@ namespace SistemaDeVoluntarios.Adapter
         {
             return new Models.Usuarios()
             {
+                Id = usuario.Id,
                 Bairro = usuario.Bairro,
                 Celular = usuario.Celular,
                 Cep = usuario.Cep,
@@ -29,7 +30,8 @@ namespace SistemaDeVoluntarios.Adapter
                 Senha = usuario.Senha,
                 Telefone = usuario.Telefone,
                 TipoPessoa = usuario.TipoPessoa,
-                TipoUsuario = usuario.TipoUsuario
+                TipoUsuario = usuario.TipoUsuario,
+                Status = usuario.Status
             };
         }
 
@@ -53,6 +55,7 @@ namespace SistemaDeVoluntarios.Adapter
         {
             return new SistemaDeVoluntarios.Dominio.Entidades.Usuarios()
             {
+                Id = usuario.Id,
                 Bairro = usuario.Bairro,
                 Celular = usuario.Celular,
                 Cep = usuario.Cep,
@@ -68,7 +71,8 @@ namespace SistemaDeVoluntarios.Adapter
                 Senha = usuario.Senha,
                 Telefone = usuario.Telefone,
                 TipoPessoa = usuario.TipoPessoa,
-                TipoUsuario = usuario.TipoUsuario
+                TipoUsuario = usuario.TipoUsuario,
+                Status = usuario.Status
             };
         }
     }
