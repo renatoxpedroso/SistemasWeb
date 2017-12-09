@@ -49,5 +49,10 @@ namespace SistemaDeVoluntarios.Aplicacao
             this.usuarioRepositorio.AlterarStatus(status, id);
         }
 
+        public void Alterar(Usuarios usuarios)
+        {
+            this.usuarioRepositorio.Alterar(usuarios);
+        }
+
     }
 }

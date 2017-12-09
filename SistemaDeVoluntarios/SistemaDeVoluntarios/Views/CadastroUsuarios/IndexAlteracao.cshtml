@@ -94,7 +94,7 @@
                             <img src="~/Scripts/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Tese</p>
+                            <p>@ViewBag.usuarioLogin.Nome</p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -150,227 +150,418 @@
                 </section>
                 <!-- /.sidebar -->
             </aside>
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Alteração de Cadastro
+                    </h1>
+                </section>
+                <!-- Main content -->
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-15">
+                            <!-- general form elements -->
+                            <div class="box box-primary">
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <form class="form" method="post" action="/CadastroUsuarios/Alterar">
+                                    <div style="margin-left:50px;" class="box-body">
 
-            <!-- Main content -->
-            <section class="content">
-                <div class="row">
-                    <!-- left column -->
-                    <div class="col-md-15">
-                        <!-- general form elements -->
-                        <div class="box box-primary">
-                            <!-- /.box-header -->
-                            <!-- form start -->
-                            <form class="form" method="post" action="/CadastroUsuarios/Gravar">
-                                <div style="margin-left:50px;" class="box-body">
+                                        <div class="form-group">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Usuário</h3>
+                                            </div>
 
-                                    <div class="form-group">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Usuário</h3>
+                                            <label for="tipousuario">Tipo de Usuário</label>
+
+                                            @{
+                                                var usu = ViewBag.usuario;
+
+                                                if (usu != null)
+                                                {
+                                                    if (usu.TipoUsuario == 1)
+                                                    {
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="1" checked> Entidade
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="2"> Voluntário
+                                                            </label>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="1"> Entidade
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="2" checked> Voluntário
+                                                            </label>
+                                                        </div>
+                                                    }
+
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="1" checked> Entidade
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="2"> Voluntário
+                                                        </label>
+                                                    </div>
+                                                }
+                                            }
                                         </div>
 
-                                        <label for="tipousuario">Tipo de Usuário</label>
+                                        <div class="form-group">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Dados Pessoais</h3>
+                                            </div>
 
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="1" checked> Entidade
-                                            </label>
+                                            <label for="tipopessoa">Tipo de Pessoa</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    if (usu.TipoPessoa == 1)
+                                                    {
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="1" checked> Física
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="2"> Jurídica
+                                                            </label>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="1"> Física
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="form-check form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="2" checked> Jurídica
+                                                            </label>
+                                                        </div>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="1" checked> Física
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="2"> Jurídica
+                                                        </label>
+                                                    </div>
+                                                }
+
+                                            }
+
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="nome" class="col-sm-2 col-form-label">Nome*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="text" required="required" class="form-control" value="@usu.Nome" name="usuarios.nome" id="nome" placeholder="Nome Usuário">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="text" required="required" class="form-control" name="usuarios.nome" id="nome" placeholder="Nome Usuário">
+                                                    </div>
+                                                }
+                                            }
                                         </div>
 
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="usuarios.tipousuario" id="tipousuario" value="2"> Voluntário
-                                            </label>
+                                        <div class="form-group row">
+                                            <label for="email" class="col-lg-2 col-form-label">E-mail*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="email" required="required" class="form-control" value="@usu.Email" name="usuarios.email" id="email" placeholder="E-mail">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="email" required="required" class="form-control" name="usuarios.email" id="email" placeholder="E-mail">
+                                                    </div>
+                                                }
+                                            }
                                         </div>
+
+                                        <div class="form-group row">
+                                            <label for="senha" class="col-lg-2 col-form-label">Senha*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="password" required="required" class="form-control" value="@usu.Senha" name="usuarios.senha" id="senha" placeholder="Senha">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="password" required="required" class="form-control" name="usuarios.senha" id="senha" placeholder="Senha">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="datanacimento" class="col-lg-2 col-form-label">Data de Nascimento</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-3">
+                                                        <input type="date" required="required" class="form-control" value="@usu.DataNacimento" name="usuarios.datanacimento" id="datanacimento" placeholder="Data de Nascimento">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-3">
+                                                        <input type="date" required="required" class="form-control" name="usuarios.datanacimento" id="datanacimento" placeholder="Data de Nascimento">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="cpfCnpj" class="col-lg-2 col-form-label">CPF*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-3">
+                                                        <input type="text" required="required" class="form-control" value="@usu.cpfCnpj" name="usuarios.cpfCnpj" id="cpfCnpj" placeholder="CPF">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-3">
+                                                        <input type="text" required="required" class="form-control" name="usuarios.cpfCnpj" id="cpfCnpj" placeholder="CPF">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="telefone" class="col-lg-2 col-form-label">Telefone</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-lg-3">
+                                                        <input type="tel" class="form-control" value="@usu.Telefone" name="usuarios.telefone" id="telefone" placeholder="Telefone">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-lg-3">
+                                                        <input type="tel" class="form-control" name="usuarios.telefone" id="telefone" placeholder="Telefone">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="celular" class="col-lg-2 col-form-label">Celular*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-3">
+                                                        <input type="tel" required="required" class="form-control" value="@usu.Celular" name="usuarios.celular" id="celular" placeholder="Celular">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-3">
+                                                        <input type="tel" required="required" class="form-control" name="usuarios.celular" id="celular" placeholder="Celular">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+
+                                        <div class="form-group ">
+                                            <div class="box-header with-border">
+                                                <h3 class="box-title">Endereço</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="rua" class="col-lg-2 col-form-label">Rua*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="text" required="required" class="form-control" value="@usu.Rua" name="usuarios.rua" id="rua" placeholder="Rua">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="text" required="required" class="form-control" name="usuarios.rua" id="rua" placeholder="Rua">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="numero" class="col-lg-2 col-form-label">Numero*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-2">
+                                                        <input type="text" required="required" class="form-control" value="@usu.Numero" name="usuarios.numero" id="numero" placeholder="Numero">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-2">
+                                                        <input type="text" required="required" class="form-control" name="usuarios.numero" id="numero" placeholder="Numero">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="bairro" class="col-lg-2 col-form-label">Bairro*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="text" required="required" class="form-control" value="@usu.Bairro" name="usuarios.bairro" id="bairro" placeholder="Bairro">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-5">
+                                                        <input type="text" required="required" class="form-control" name="usuarios.bairro" id="bairro" placeholder="Bairro">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="estado" class="col-lg-2 col-form-label">Estado*</label>
+
+                                            <div class="col-sm-4">
+                                                <select class="form-control" name="usuarios.estado" id="estado">
+
+                                                    @foreach (var estado in ViewBag.estados)
+                                                    {
+                                                        if (usu != null)
+                                                        {
+                                                            if (estado == usu.Estado)
+                                                            {
+                                                                <option selected="selected" value="@estado">@estado</option>
+                                                            }
+                                                            else
+                                                            {
+                                                                <option value="@estado">@estado</option>
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@estado">@estado</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="cidade" class="col-lg-2 col-form-label">Cidade*</label>
+                                            <div class="col-sm-4">
+                                                <select class="form-control" name="usuarios.cidade" id="cidade">
+
+                                                    @foreach (var cidade in ViewBag.cidades)
+                                                    {
+                                                        if (usu != null)
+                                                        {
+                                                            if (cidade == usu.Cidade)
+                                                            {
+                                                                <option selected="selected" value="@cidade">@cidade</option>
+                                                            }
+                                                            else
+                                                            {
+                                                                <option value="@cidade">@cidade</option>
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@cidade">@cidade</option>
+                                                        }
+
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="cep" class="col-lg-2 col-form-label">CEP*</label>
+                                            @{
+                                                if (usu != null)
+                                                {
+                                                    <div class="col-sm-2">
+                                                        <input type="tel" required="required" class="form-control" value="@usu.Cep" name="usuarios.cep" id="cep" placeholder="CEP">
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="col-sm-2">
+                                                        <input type="tel" required="required" class="form-control" name="usuarios.cep" id="cep" placeholder="CEP">
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+
+                                        <div class="btn-group row">
+                                            <button type="submit" class="btn btn-primary">Alterar</button>
+                                        </div>
+
+
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Dados Pessoais</h3>
-                                        </div>
-
-                                        <label for="tipopessoa">Tipo de Pessoa</label>
-
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="1"> Física
-                                            </label>
-                                        </div>
-
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio" name="usuarios.tipopessoa" id="tipopessoa" value="2"> Jurídica
-                                            </label>
-                                        </div>
-
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="nome" class="col-sm-2 col-form-label">Nome*</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" required="required" class="form-control" name="usuarios.nome" id="nome" placeholder="Nome Usuário">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="email" class="col-lg-2 col-form-label">E-mail*</label>
-                                        <div class="col-sm-5">
-                                            <input type="email" required="required" class="form-control" name="usuarios.email" id="email" placeholder="E-mail">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="senha" class="col-lg-2 col-form-label">Senha*</label>
-                                        <div class="col-sm-5">
-                                            <input type="password" required="required" class="form-control" name="usuarios.senha" id="senha" placeholder="Senha">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="datanacimento" class="col-lg-2 col-form-label">Data de Nascimento</label>
-
-                                        <div class="col-sm-3">
-                                            <input type="date" required="required" class="form-control" name="usuarios.datanacimento" id="datanacimento" placeholder="Data de Nascimento">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="cpfCnpj" class="col-lg-2 col-form-label">CPF*</label>
-                                        <div class="col-sm-3">
-                                            <input type="text" required="required" class="form-control" name="usuarios.cpfCnpj" id="cpfCnpj" placeholder="CPF">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="telefone" class="col-lg-2 col-form-label">Telefone</label>
-                                        <div class="col-lg-3">
-                                            <input type="tel" class="form-control" name="usuarios.telefone" id="telefone" placeholder="Telefone">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="celular" class="col-lg-2 col-form-label">Celular*</label>
-                                        <div class="col-sm-3">
-                                            <input type="tel" required="required" class="form-control" name="usuarios.celular" id="celular" placeholder="Celular">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group ">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Endereço</h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="rua" class="col-lg-2 col-form-label">Rua*</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" required="required" class="form-control" name="usuarios.rua" id="rua" placeholder="Rua">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="numero" class="col-lg-2 col-form-label">Numero*</label>
-                                        <div class="col-sm-2">
-                                            <input type="text" required="required" class="form-control" name="usuarios.numero" id="numero" placeholder="Numero">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="bairro" class="col-lg-2 col-form-label">Bairro*</label>
-                                        <div class="col-sm-5">
-                                            <input type="text" required="required" class="form-control" name="usuarios.bairro" id="bairro" placeholder="Bairro">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="estado" class="col-lg-2 col-form-label">Estado*</label>
-
-                                        <div class="col-sm-4">
-                                            <select class="form-control" name="usuarios.estado" id="estado">
-                                                <option>Acre</option>
-                                                <option>Alagoas</option>
-                                                <option>Amapá</option>
-                                                <option>Amazonas</option>
-                                                <option>Bahia</option>
-                                                <option>Ceará</option>
-                                                <option>Distrito Federal</option>
-                                                <option>Espírito Santo</option>
-                                                <option>Goiás</option>
-                                                <option>Maranhão</option>
-                                                <option>Mato Grosso</option>
-                                                <option>Mato Grosso do Sul</option>
-                                                <option>Minas Gerais</option>
-                                                <option>Pará</option>
-                                                <option>Paraíba</option>
-                                                <option>Paraná</option>
-                                                <option>Pernambuco</option>
-                                                <option>Piauí</option>
-                                                <option>Rio de Janeiro</option>
-                                                <option>Rio Grande do Norte</option>
-                                                <option>Rio Grande do Sul</option>
-                                                <option>Rondônia</option>
-                                                <option>Roraima</option>
-                                                <option>Santa Catarina</option>
-                                                <option>São Paulo</option>
-                                                <option>Sergipe</option>
-                                                <option>Tocantins</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="cidade" class="col-lg-2 col-form-label">Cidade*</label>
-                                        <div class="col-sm-4">
-                                            <select class="form-control" name="usuarios.cidade" id="cidade">
-                                                <option>Agua Santa</option>
-                                                <option>Agudo</option>
-                                                <option>Ajuricaba</option>
-                                                <option>Alecrim</option>
-                                                <option>Alegrete</option>
-                                                <option>Alegria</option>
-                                                <option>Alpestre</option>
-                                                <option>Alto Alegre</option>
-                                                <option>Alto Feliz</option>
-                                                <option>Alvorada</option>
-                                                <option>Amaral Ferrador</option>
-                                                <option>Ametista do Sul</option>
-                                                <option>Andre da Rocha</option>
-                                                <option>Anta Gorda</option>
-                                                <option>Antonio Prado</option>
-                                                <option>Arambare</option>
-                                                <option>Ararica</option>
-                                                <option>Aratiba</option>
-                                                <option>Arroio Grande</option>
-                                                <option>Arroio do Meio</option>
-                                                <option>Arroio do Sal</option>
-                                                <option>Arroio do Tigre</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="cep" class="col-lg-2 col-form-label">CEP*</label>
-                                        <div class="col-sm-2">
-                                            <input type="tel" required="required" class="form-control" name="usuarios.cep" id="cep" placeholder="CEP">
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-group row">
-                                        <button type="button" class="btn btn-primary">Limpar</button>
-                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                    </div>
-
-
-                                </div>
-
-                            </form>
+                                </form>
+                            </div>
+                            <!-- /.box-body -->
                         </div>
-                        <!-- /.box-body -->
+                        <!-- /.box -->
                     </div>
-                    <!-- /.box -->
-                </div>
-                <!--/.col (right) -->
-        </div>
-        <!-- /.row -->
+                    <!--/.col (right) -->
+            </div>
         </section>
         <!-- /.content -->
     </div>

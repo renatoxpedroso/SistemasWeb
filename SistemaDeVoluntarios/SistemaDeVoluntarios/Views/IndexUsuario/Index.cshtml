@@ -64,7 +64,7 @@
                         <img src="~/Scripts/dist/img/avatar04.png" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>@ViewBag.usuarioLogin.Nome</p>
+                       <p>@ViewBag.usuarioLogin.Nome</p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
@@ -123,9 +123,9 @@
                                     <div class="form-group">
                                         <div class="form-inline row">
                                             <div col-md-6">
-                                                <label>Nome: </label>Teobaldo Nunes da Silva  &nbsp&nbsp&nbsp
-                                                <label>Email: </label> teo_silva@hotmail.com   &nbsp&nbsp&nbsp
-                                                <label>CPF: </label> 000.000.000-00
+                                                <label>Nome: </label>@ViewBag.usuarioLogin.Nome  &nbsp&nbsp&nbsp
+                                                <label>Email: </label>@ViewBag.usuarioLogin.Email   &nbsp&nbsp&nbsp
+                                                <label>CPF: </label>@ViewBag.usuarioLogin.cpfCnpj
                                             </div>
                                             </br>
                                             <div col-md-6">

@@ -10,7 +10,7 @@ namespace SistemaDeVoluntarios.Dominio.Repositorios
     public interface IUsuariosRepositorio
     {
         void Inserir(Usuarios usuarios);
-        void Alterar(Usuarios usuarios, Guid id);
+        void Alterar(Usuarios usuarios);
         void AlterarStatus(int status, int id);
         void Excluir(Guid id);
         Usuarios ProcurarCodigo(int id);

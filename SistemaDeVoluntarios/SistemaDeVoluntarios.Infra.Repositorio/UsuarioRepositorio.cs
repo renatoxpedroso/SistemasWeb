@@ -52,7 +52,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                             comando.Parameters.AddWithValue("Cidade", usuarios.Cidade);
                             comando.Parameters.AddWithValue("Cep", usuarios.Cep);
                             comando.Parameters.AddWithValue("Estado", usuarios.Estado);
-                            comando.Parameters.AddWithValue("Status", usuarios.Status);
+                            comando.Parameters.AddWithValue("Status", 1);
 
                             comando.ExecuteNonQuery();
                             transacao.Commit();
@@ -70,7 +70,7 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
             }
         }
 
-        public void Alterar(Usuarios usuarios, Guid id)
+        public void Alterar(Usuarios usuarios)
         {
             try
             {
@@ -83,10 +83,10 @@ namespace SistemaDeVoluntarios.Infra.Repositorio
                         {
                             NpgsqlCommand comando = new NpgsqlCommand();
                             comando.Connection = con;
-                            comando.CommandText = "UPDATE Usuarios SET TipoUsuario=@TipoUsuario, TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNecimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado, Status=@Status WHERE CodUsuario=@CodUsuario ";
+                            comando.CommandText = "UPDATE Usuarios SET TipoUsuario=@TipoUsuario, TipoPessoa=@TipoPessoa, Nome=@Nome, Email=@Email, Senha=@Senha, DataNacimento=@DataNacimento, cpfCnpj=@cpfCnpj, Telefone=@Telefone, Celular=@celular, Rua=@Rua, Numero=@Numero, Bairro=@Bairro, Cidade=@Cidade, Cep=@Cep, Estado=@Estado, Status=@Status WHERE CodUsuario=@CodUsuario ";
 
 
-                            comando.Parameters.AddWithValue("CodUsuario", id.ToString());
+                            comando.Parameters.AddWithValue("CodUsuario", Convert.ToString(usuarios.CodUsuario));
                             comando.Parameters.AddWithValue("TipoUsuario", usuarios.TipoUsuario);
                             comando.Parameters.AddWithValue("TipoPessoa", usuarios.TipoPessoa);
                             comando.Parameters.AddWithValue("Nome", usuarios.Nome);
