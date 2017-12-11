@@ -128,38 +128,38 @@
                                                 <label>CPF: </label>@ViewBag.usuarioLogin.cpfCnpj
                                             </div>
                                             </br>
-                                            <div col-md-6">
+                                            <!--<div col-md-6">
                                                 <label> Data de Nascimento:</label> 09/08/1987
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
                                 <div class=" form-inline row ">
                                     <label>Telefone: </label>
-                                    <input type="number" required="required" class="form-control" id="telefone" placeholder="(00)0000-0000">
+                                    <input type="number" required="required" value="@ViewBag.usuarioLogin.Telefone" class="form-control" id="telefone" placeholder="(00)0000-0000">
                                     &nbsp&nbsp&nbsp
                                     <label>Celular: </label>
-                                    <input type="number" required="required" class="form-control" id="telefone" placeholder="(00)0000-0000">
+                                    <input type="number" required="required" value="@ViewBag.usuarioLogin.Celular" class="form-control" id="telefone" placeholder="(00)0000-0000">
                                 </div>
                                 </br>
                                 <div class="form-inline row">
                                     <label>Rua: </label> &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
-                                    <input type="text" required="required" class="form-control" id="rua">
+                                    <input type="text" required="required" value="@ViewBag.usuarioLogin.Rua" class="form-control" id="rua">
                                 </div>
                                 </br>
                                 <div class="form-inline row">
                                     <label>Numero:</label>&nbsp&nbsp
-                                    <input type="number" required="required" class="form-control" id="numero">
+                                    <input type="number" required="required" value="@ViewBag.usuarioLogin.Numero" class="form-control" id="numero">
                                 </div>
                                 </br>
                                 <div class="form-inline row">
                                     <label>Bairro: </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                    <input type="text" required="required" class="form-control" id="bairro">
+                                    <input type="text" required="required" value="@ViewBag.usuarioLogin.Bairro" class="form-control" id="bairro">
                                 </div>
                                 </br>
                                 <div class="form-inline row">
                                     <label>Cidade: </label>&nbsp&nbsp&nbsp&nbsp
-                                    <input type="text" required="required" class="form-control" id="cidade">
+                                    <input type="text" required="required" value="@ViewBag.usuarioLogin.Cidade" class="form-control" id="cidade">
                                     <!--<select size="1">
                                         <option selected value="Selecione">Selecione</option>
                                         <option value="opcao1">Caxias do Sul</option>
@@ -170,7 +170,7 @@
                                 </br>
                                 <div class="form-inline row">
                                     <label>Estado: </label>&nbsp&nbsp&nbsp&nbsp
-                                    <input type="text" required="required" class="form-control" id="estado">
+                                    <input type="text" required="required" value="@ViewBag.usuarioLogin.Estado" class="form-control" id="estado">
                                     <!--<select size="1">
                                         <option selected value="Selecione">Selecione</option>
                                         <option value="opcao1">RS</option>
@@ -180,7 +180,7 @@
                                 </br>
                                 <div class="form-inline row">
                                     <label>CEP: </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                    <input type="text" required="required" class="form-control" id="cep">
+                                    <input type="text" required="required" value="@ViewBag.usuarioLogin.Cep" class="form-control" id="cep">
                                 </div>
                                 </br>
                         </div>
@@ -201,9 +201,6 @@
             <!--/.col (right) -->
         </div>
         <!-- /.row -->
-        </section>
-    <!-- /.content -->
-    </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
@@ -213,7 +210,7 @@
     </footer>
 
     <div class="control-sidebar-bg"></div>
-    </div>
+    
     <!-- ./wrapper -->
     <!-- jQuery 3 -->
     <script src="~/Scripts/bower_components/jquery/dist/jquery.min.js"></script>
